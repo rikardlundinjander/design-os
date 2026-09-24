@@ -7,9 +7,9 @@ This file tells AI agents how to use Design OS. It applies to any tool or model 
 ## How a project starts
 
 1. The user clones or copies this repository.
-2. The user adds any brand material they have to the `brand/` folder. This can be anything: a logo, a screenshot of a palette, guidelines, font files, or nothing at all.
+2. The user adds any brand material they have to the `brand/` folder. This can be anything: a logo, a screenshot of a palette, guidelines, font files, or nothing at all. Optionally, they add their own taste to the `taste/` folder: preferences, refusals and references.
 3. The user describes in written text what they want to build. The description may also contain links, such as a component library, an existing website or a design file.
-4. **You** turn the description and the brand material into a recipe, and write it to `recipe.md` at the project root.
+4. **You** turn the description, the brand material and any taste input into a recipe, and write it to `recipe.md` at the project root.
 5. The user reviews and adjusts the recipe. Only then do you build from it.
 
 The user does not fill in templates. Your job is to interpret free-form input and make the choices explicit.
@@ -29,6 +29,8 @@ Design OS describes digital products as combinations of six independent layers:
 | 5 | Density and personality | `archetypes/density-and-personality.md` | Set dials from 0 to 100 |
 | 6 | Brand | `archetypes/brand.md` | Interpret brand input |
 
+Taste is an optional modifier, not a layer. `archetypes/taste.md` describes how to interpret the input in `taste/`. It fills choices that the description and the brand leave open, and adds refusals to the avoid lists. It never changes structure or brand.
+
 ---
 
 ## Creating the recipe
@@ -37,6 +39,7 @@ Design OS describes digital products as combinations of six independent layers:
 
 - The written project description
 - Everything in `brand/`, and every link mentioned in the description
+- Everything in `taste/`, if the folder has content
 - An existing `recipe.md`, if the project already has one; update it rather than starting over
 
 ### 2. Choose each layer, in order
@@ -51,17 +54,21 @@ For each layer, read its "How to use this file" section and the sections listed 
 
 ### 3. Set the dials
 
-Start from the preset for the chosen visual language. Move only the dials the description gives a reason to move. Push at least two dials clearly away from the middle, as the dials file requires.
+Start from the preset for the chosen visual language. If there is taste input, shift the starting positions toward its tendencies, within the language's natural range. Then move only the dials the description gives a reason to move. Push at least two dials clearly away from the middle, as the dials file requires.
 
 ### 4. Interpret the brand
 
 Follow the four steps in `archetypes/brand.md`: inventory, extract, fill gaps, confirm. Mark every value that was read from an image, generated or filled in as a fallback. If the brand input includes a design system or an existing product, identify the closest visual language and dial values, and decide with the user whether to follow or evolve it.
 
-### 5. Ask only what changes the choices
+### 5. Interpret the taste
+
+If `taste/` has content, follow the steps in `archetypes/taste.md`: inventory, extract, weigh, confirm. Taste yields to the description and the brand. Add its refusals to the avoid lists, and use its language affinities only where the description leaves the choice open. Skip this step when there is no taste input.
+
+### 6. Ask only what changes the choices
 
 Do not ask the user to answer every kickoff question. Ask only when the answer would change a choice in the recipe, and ask all such questions at once. Everything else becomes an assumption, stated in the recipe.
 
-### 6. Write the recipe
+### 7. Write the recipe
 
 Write `recipe.md` using the format below, and present it to the user for review.
 
@@ -81,6 +88,7 @@ Visual:     <dominant> + <secondary> (<scope>)
 Motion:     <language> + <exception> (<scope>)
 Dials:      density <n>, contrast <n>, softness <n>, depth <n>, color <n>, warmth <n>, expressivity <n>, motion <n>, novelty <n>
 Brand:      <short summary of sources>, presence <level> (<surface>), <level> (<surface>)
+Taste:      <whose taste, or none>, applied to <choices, dials, avoid lists>
 ```
 
 ## What we are building
@@ -102,6 +110,14 @@ For each layer: the choice, the scope of any supporting choice, why, and how the
 - **Extracted:** <asset: value, and source>
 - **Filled in:** <asset: fallback value, and why>
 - **Conflicts and resolutions:** <conflicts with the visual language, and how they are resolved>
+
+## Taste
+
+<Omit this section when there is no taste input.>
+
+- **Sources:** <files, links and statements used>
+- **Applied:** <choices, dial shifts and added refusals, and what they came from>
+- **Yielded:** <where taste gave way to the description or the brand>
 
 ## Project principles
 
@@ -137,6 +153,7 @@ Do not load every file in full for every task. For each layer, read the shared s
 | Motion language | What this layer owns, Non-negotiables, The generic default, Vocabulary | Principles, Avoid, Tendencies, Reduced motion, the column in the Moments table |
 | Dials | Resolution order | The mapping and guardrails for every dial the recipe sets, and the presets table |
 | Brand | The whole file | Not applicable |
+| Taste | The whole file, when `taste/` has content | The references for the chosen languages |
 
 For secondary or supporting choices, read the same sections and apply them only within their stated scope.
 
@@ -150,6 +167,7 @@ Each layer owns specific decisions, listed in its "What this layer owns" section
 
 - Product type and experience model decide structure and behavior. Brand never changes them.
 - Visual language decides the character of form. Dials decide the amount. Brand decides the specific assets.
+- Taste fills only what the description and the brand leave open. It never changes structure, behavior or brand assets.
 - The experience model states what motion must communicate. The motion language decides how.
 
 ### Resolve values in order
@@ -189,7 +207,7 @@ Use only archetypes, dials and presets that exist in the repository. If a projec
 
 Generated work tends to repeat the same patterns in writing and in visual design. They make a product look generated and interchangeable. Treat everything below as banned by default.
 
-A pattern is allowed only when the recipe or the brand explicitly asks for it. Record the reason in `recipe.md`. Functional use is not slop: a monospace face for code or tabular data, or numbers for a real sequence of steps, is fine when the visual language supports it.
+A pattern is allowed only when the recipe or the brand explicitly asks for it. Taste input cannot allow it. Record the reason in `recipe.md`. Functional use is not slop: a monospace face for code or tabular data, or numbers for a real sequence of steps, is fine when the visual language supports it.
 
 ### Writing
 
@@ -273,4 +291,5 @@ Do not change the archetype files as a side effect of project work. When project
 - [ ] All non-negotiables are met
 - [ ] Required states are handled, not only the ideal state
 - [ ] Brand fallbacks and generated values are marked
+- [ ] Taste was applied only where the description and the brand left room, and every use is recorded
 - [ ] Assumptions and tensions are listed

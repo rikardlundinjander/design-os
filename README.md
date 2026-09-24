@@ -39,15 +39,18 @@ The goal is not a library of templates. Templates reproduce sameness. The goal i
 
 Layers 1 to 4 are archetypes: a defined set of options to choose from. Layer 5 is a set of dials. Layer 6 is interpreted from whatever brand material the project has.
 
+**Taste** is an optional modifier, described in [taste.md](archetypes/taste.md). It holds the preferences of the people designing the product: what they are drawn to, what they refuse, and references that show what they mean. The archetypes stay neutral. Taste only fills the choices that the description and the brand leave open, and adds its refusals to the avoid lists.
+
 ---
 
 ## Starting a project
 
 1. **Clone or copy this repository.**
 2. **Add brand material, if you have any,** to the `brand/` folder. It can be anything: a logo, a screenshot of a color palette, brand guidelines, font files. Links, such as a component library or an existing website, can go in the description instead. No template to fill in.
-3. **Describe in plain text what you want to build.** Who it is for, what it should do, what it should feel like, and any constraints.
-4. **Let the AI write a recipe.** Following [`AGENTS.md`](AGENTS.md), it chooses from each layer, sets the dials, interprets the brand material and writes the result to `recipe.md`. It asks only questions whose answers would change a choice.
-5. **Review and adjust the recipe,** then build from it.
+3. **Add your taste, if you want to,** to the `taste/` folder: a written profile, things you never do, references with notes on what to take from them. Keep screenshots of other people's work out of public repositories.
+4. **Describe in plain text what you want to build.** Who it is for, what it should do, what it should feel like, and any constraints.
+5. **Let the AI write a recipe.** Following [`AGENTS.md`](AGENTS.md), it chooses from each layer, sets the dials, interprets the brand material and any taste, and writes the result to `recipe.md`. It asks only questions whose answers would change a choice.
+6. **Review and adjust the recipe,** then build from it.
 
 A recipe looks like this at its core, followed by the reasons for each choice, the interpreted brand, assumptions and open questions:
 
@@ -58,6 +61,7 @@ Visual:     Neutral
 Motion:     Quiet
 Dials:      density 30, contrast 75, softness 40, depth 15, color 25, warmth 55, expressivity 15, motion 20, novelty 5
 Brand:      logo and one color from brand/, presence present (product), quiet (forms and payment)
+Taste:      none
 ```
 
 A recipe is a starting point, not a specification. It gives the project something concrete enough to react to, and open enough to become unique.
@@ -98,8 +102,10 @@ design-os/
 │   ├── visual-languages.md
 │   ├── motion-languages.md
 │   ├── density-and-personality.md
-│   └── brand.md
-└── brand/                    brand material for the project, in any form
+│   ├── brand.md
+│   └── taste.md
+├── brand/                    brand material for the project, in any form
+└── taste/                    optional taste input, in any form
 ```
 
 Planned: implementation examples per archetype, such as tokens and reference views, once the text definitions are stable.
@@ -108,7 +114,7 @@ Planned: implementation examples per archetype, such as tokens and reference vie
 
 ## Using Design OS in a project
 
-Keep the archetype files unchanged in the project. Project-specific material lives beside them: brand material in `brand/`, and the recipe in `recipe.md` at the project root, written by the AI and adjusted by you.
+Keep the archetype files unchanged in the project. Project-specific material lives beside them: brand material in `brand/`, taste in `taste/`, and the recipe in `recipe.md` at the project root, written by the AI and adjusted by you.
 
 Most AI tools read [`AGENTS.md`](AGENTS.md) automatically. It describes how to turn a written description into a recipe, which sections of each layer to read, how values are resolved and how to check the work before delivering it.
 
