@@ -150,7 +150,7 @@ Do not load every file in full for every task. For each layer, read the shared s
 | Product type | What this layer owns | Key views, key flows, required states, structural needs, common failure modes |
 | Experience model | What this layer owns | Navigation, selection and feedback, implications for other layers, anti-patterns |
 | Visual language | What this layer owns, Non-negotiables, The generic default | Principles, Avoid, Tendencies |
-| Motion language | What this layer owns, Non-negotiables, The generic default, Vocabulary | Principles, Avoid, Tendencies, Reduced motion, the column in the Moments table |
+| Motion language | What this layer owns, Non-negotiables, The generic default, Vocabulary, Timing grows in the product | Role and character, Principles, Avoid, Reduced motion, the column in the Moments table |
 | Dials | From direction to values, Anchoring the dials | The descriptions and guardrails for every dial the recipe sets, and the presets table |
 | Brand | The whole file | Not applicable |
 | Taste | The whole file, when `taste/` has content | The references for the chosen languages |

@@ -1,14 +1,16 @@
 ---
 layer: motion
-version: 0.1
+version: 0.2
 status: draft
 ---
 
 # Motion languages
 
-Layer 4 of the archetype system. A motion language describes **how the product moves**: what motion is used for, how fast and how far things travel, how they accelerate and settle, how movements are sequenced, and where motion is deliberately absent.
+Layer 4 of the archetype system. A motion language describes **the role and character of motion**: what motion is used for, how it feels, and where it is deliberately absent.
 
 Motion is not decoration. It explains what happened, where things went, what caused what and what matters now. A motion language decides how much of that explanation is carried by movement, and with what character.
+
+A motion language does not set durations or curves. Specific timing and behavior grow in the actual product, where motion can be seen and felt, and are recorded there once they settle (see [Timing grows in the product](#timing-grows-in-the-product)).
 
 ---
 
@@ -19,7 +21,7 @@ Motion is not decoration. It explains what happened, where things went, what cau
 | Product type | Which states and transitions exist |
 | Experience model | **What** motion must communicate, such as "show where the object went" |
 | Visual language | The character motion must fit, such as restrained or expressive |
-| **Motion language** | **How** it is communicated: timing, easing, distance, choreography |
+| **Motion language** | **How** it is communicated: the role motion plays and its character |
 | Density and personality | How much motion, via the motion dial |
 | Brand | Signature moments, such as a logo animation or a characteristic curve |
 
@@ -32,7 +34,7 @@ The experience model hands over requirements. The motion language fulfills them.
 1. **Pick one motion language.** Unlike other layers, motion rarely benefits from a secondary language. If needed, scope it tightly, for example "Cinematic on the landing experience only".
 2. **List the motion requirements from the experience model.** Each dominant and supporting model states what motion must communicate.
 3. **Use the moments table** to see how the chosen language handles common moments.
-4. **Set the tokens from the tendencies table.** Durations, easing and distances become the motion tokens of the project.
+4. **Write the role and character into the recipe,** not values. Durations and curves are found in the product.
 5. **Define reduced motion behavior** before anything else is animated.
 
 If you cannot decide, answer this: *when the user does something, should they feel the product respond, or just see the result?* Feeling points toward Responsive, Physical or Expressive. Seeing points toward Still or Quiet.
@@ -43,14 +45,12 @@ If you cannot decide, answer this: *when the user does something, should they fe
 
 | This layer decides | This layer does not decide |
 |---|---|
-| Which purposes motion serves | What must be communicated (experience model) |
-| Duration scale | Visual style of what moves (visual language) |
-| Easing and physical behavior | Amount of motion overall (motion dial) |
-| Distance and scale of movement | Signature brand animations (brand) |
-| Choreography: order, overlap, stagger | Which states exist (product type) |
-| Interruptibility and gesture continuity | |
-| Reduced motion behavior | |
-| Where motion is deliberately absent | |
+| Role: which purposes motion serves | What must be communicated (experience model) |
+| Character: tempo, easing, distance and choreography, described in words | Visual style of what moves (visual language) |
+| Interruptibility and gesture continuity | Amount of motion overall (motion dial) |
+| Reduced motion behavior | Signature brand animations (brand) |
+| Where motion is deliberately absent | Which states exist (product type) |
+| | Specific durations and curves (the product) |
 
 ---
 
@@ -76,15 +76,15 @@ Motion languages differ mostly in which purposes they use, and how strongly.
 
 Shared terms used throughout this file.
 
-**Duration tiers:**
+**Tempo:** words for how quickly motion completes, relative to each other.
 
-| Tier | Range | Typical use |
+| Tempo | Feels like | Typical use |
 |---|---|---|
-| Instant | 0 to 100 ms | Feedback on press, hover, focus |
-| Fast | 100 to 200 ms | Small state changes, toggles, small elements |
-| Moderate | 200 to 350 ms | Overlays, panels, list changes |
-| Slow | 350 to 600 ms | View transitions, large elements |
-| Extended | 600 ms and up | Narrative moments, orchestrated sequences |
+| Instant | No perceptible wait | Feedback on press, hover, focus |
+| Fast | Noticed, but never waited for | Small state changes, toggles, small elements |
+| Moderate | A clear, unhurried movement | Overlays, panels, list changes |
+| Slow | A deliberate transition | View transitions, large elements |
+| Extended | A moment in itself | Narrative moments, orchestrated sequences |
 
 Larger elements and longer distances need more time. Frequently repeated motion needs less.
 
@@ -141,19 +141,18 @@ Each motion language below includes an avoid list that moves away from this defa
 
 ## Schema
 
-Every motion language uses the same sections.
+Every motion language uses the same sections. Role says what motion is for; tempo, easing, distance and choreography describe its character, in words rather than values.
 
 - **Definition:** one sentence.
 - **Feels like:** three words.
-- **Primary purposes:** which purposes of motion it relies on.
-- **Timing:** typical duration tiers.
-- **Easing:** preferred curves or physical behavior.
+- **Role:** which purposes of motion it relies on.
+- **Tempo:** how quickly motion completes, from the tempo vocabulary.
+- **Easing:** the kind of acceleration or physical behavior.
 - **Distance and scale:** how far and how much things move.
 - **Choreography:** how multiple movements relate.
 - **Where motion appears:** and where it is deliberately absent.
 - **Principles:** rules that can be followed by people and AI.
 - **Avoid:** what breaks the language.
-- **Tendencies:** starting values for motion tokens.
 - **Reduced motion:** how the language degrades.
 - **Fits well with:** visual languages and experience models.
 - **Risks:** where the language fails.
@@ -162,7 +161,7 @@ Every motion language uses the same sections.
 
 ## Overview
 
-| Language | Primary purposes | Timing | Physicality | Character |
+| Language | Role | Tempo | Physicality | Character |
 |---|---|---|---|---|
 | [Still](#still) | State | Instant | None | Absent |
 | [Quiet](#quiet) | Feedback, state, continuity | Fast | Low | Subtle |
@@ -179,9 +178,9 @@ Every motion language uses the same sections.
 
 **Feels like:** Immediate, stable, uncompromising.
 
-**Primary purposes:** State, carried visually rather than through movement.
+**Role:** State, carried visually rather than through movement.
 
-**Timing:** Instant. Where transitions exist, they are very short fades.
+**Tempo:** Instant. Where transitions exist, they are very short fades.
 
 **Easing:** Not relevant for most elements. Short linear or standard fades where needed.
 
@@ -201,17 +200,6 @@ Every motion language uses the same sections.
 - Transitions added to soften abrupt changes that are better solved by layout
 - Loading animations that call attention to themselves
 
-**Tendencies:**
-
-| Token | Value |
-|---|---|
-| Feedback duration | 0 to 50 ms |
-| State change | 0 to 100 ms |
-| View transition | None, or 100 ms fade |
-| Easing | Linear or standard |
-| Distance | None |
-| Stagger | None |
-
 **Reduced motion:** Already compliant. No change needed.
 
 **Fits well with:** Brutalist, Precision, Neutral. Command, Document, Dashboard.
@@ -226,9 +214,9 @@ Every motion language uses the same sections.
 
 **Feels like:** Calm, smooth, unobtrusive.
 
-**Primary purposes:** Feedback, state and continuity.
+**Role:** Feedback, state and continuity.
 
-**Timing:** Fast for most changes; moderate for overlays and panels.
+**Tempo:** Fast for most changes; moderate for overlays and panels.
 
 **Easing:** Standard, decelerate for entering, accelerate for leaving. No overshoot.
 
@@ -249,18 +237,6 @@ Every motion language uses the same sections.
 - Motion on elements the user did not interact with
 - Long durations on frequently repeated actions
 
-**Tendencies:**
-
-| Token | Value |
-|---|---|
-| Feedback duration | 50 to 100 ms |
-| State change | 120 to 200 ms |
-| Overlay in / out | 200 ms / 150 ms |
-| View transition | 200 to 300 ms |
-| Easing | Standard, decelerate, accelerate |
-| Distance | Small, a few spacing units |
-| Stagger | None or very small |
-
 **Reduced motion:** Replace movement with fades of the same duration.
 
 **Fits well with:** Neutral, Refined, Editorial, Warm. Object, Workflow, Document, Service.
@@ -275,9 +251,9 @@ Every motion language uses the same sections.
 
 **Feels like:** Snappy, precise, alive.
 
-**Primary purposes:** Feedback and causality.
+**Role:** Feedback and causality.
 
-**Timing:** Instant for feedback, fast for everything else. Nothing slow.
+**Tempo:** Instant for feedback, fast for everything else. Nothing slow.
 
 **Easing:** Sharp decelerate. Short, stiff springs with little or no overshoot.
 
@@ -294,22 +270,10 @@ Every motion language uses the same sections.
 - Everything can be interrupted.
 
 **Avoid:**
-- Durations in the slow tier
+- A slow tempo on anything
 - Waiting for an animation to finish before accepting new input
 - Soft, floaty easing
 - Motion that happens without user input
-
-**Tendencies:**
-
-| Token | Value |
-|---|---|
-| Feedback duration | 0 to 80 ms |
-| State change | 100 to 150 ms |
-| Overlay in / out | 150 ms / 100 ms |
-| View transition | 150 to 250 ms |
-| Easing | Sharp decelerate, stiff spring |
-| Distance | Short |
-| Stagger | Very small, if any |
 
 **Reduced motion:** Keep instant feedback such as color and opacity; remove travel and scale.
 
@@ -325,9 +289,9 @@ Every motion language uses the same sections.
 
 **Feels like:** Tactile, weighty, natural.
 
-**Primary purposes:** Continuity and feedback.
+**Role:** Continuity and feedback.
 
-**Timing:** Defined by springs rather than fixed durations. Fast to settle, with natural variation.
+**Tempo:** Defined by springs rather than fixed durations. Fast to settle, with natural variation.
 
 **Easing:** Springs with moderate stiffness and damping. Slight overshoot allowed where it matches the material.
 
@@ -349,17 +313,6 @@ Every motion language uses the same sections.
 - Physics that differs between similar objects
 - Gestures without a non-gesture alternative
 
-**Tendencies:**
-
-| Token | Value |
-|---|---|
-| Feedback duration | Immediate, follows input |
-| Spring (small elements) | High stiffness, high damping |
-| Spring (panels, sheets) | Medium stiffness, medium damping |
-| Overshoot | None to slight |
-| Momentum | Enabled for scroll and swipe |
-| Interruptible | Always |
-
 **Reduced motion:** Keep gesture following, since it is input, not animation. Remove overshoot and momentum on release; settle directly.
 
 **Fits well with:** Warm, Playful, Cinematic, Neutral. Manipulation, Canvas, Feed.
@@ -374,9 +327,9 @@ Every motion language uses the same sections.
 
 **Feels like:** Distinctive, confident, memorable.
 
-**Primary purposes:** Character, hierarchy and attention.
+**Role:** Character, hierarchy and attention.
 
-**Timing:** Moderate, with contrast between fast and slow for emphasis.
+**Tempo:** Moderate, with contrast between fast and slow for emphasis.
 
 **Easing:** Custom curves used consistently as a signature. Overshoot and anticipation allowed where they fit the character.
 
@@ -398,18 +351,6 @@ Every motion language uses the same sections.
 - Choreography that delays access to content
 - Borrowed effects that do not belong to the product's character
 
-**Tendencies:**
-
-| Token | Value |
-|---|---|
-| Feedback duration | 80 to 120 ms |
-| State change | 150 to 250 ms |
-| Key moment | 400 to 800 ms |
-| View transition | 300 to 450 ms |
-| Easing | Signature custom curve, optional overshoot |
-| Distance | Medium to large in key moments |
-| Stagger | Noticeable, used for hierarchy |
-
 **Reduced motion:** Keep the sequence and timing as fades; remove travel, scale and overshoot. Signature moments may become still compositions.
 
 **Fits well with:** Playful, Graphic, Warm, Editorial. Feed, Narrative, Conversation.
@@ -424,9 +365,9 @@ Every motion language uses the same sections.
 
 **Feels like:** Immersive, dramatic, deliberate.
 
-**Primary purposes:** Continuity, hierarchy and character.
+**Role:** Continuity, hierarchy and character.
 
-**Timing:** Slow to extended. Pacing matters as much as speed.
+**Tempo:** Slow to extended. Pacing matters as much as speed.
 
 **Easing:** Long, smooth decelerate. Camera-like ease in and out. Rarely overshoot.
 
@@ -447,18 +388,6 @@ Every motion language uses the same sections.
 - Scroll hijacking that fights the user's input
 - Parallax and depth without reduced motion alternatives
 - Atmosphere that hides content or the way forward
-
-**Tendencies:**
-
-| Token | Value |
-|---|---|
-| Feedback duration | 80 to 120 ms, controls stay responsive |
-| Scene transition | 600 to 1200 ms |
-| View transition | 400 to 700 ms |
-| Easing | Long decelerate, camera ease |
-| Distance | Large, full view |
-| Stagger | Layered, by depth |
-| Scroll-linked | Allowed, never hijacked |
 
 **Reduced motion:** Replace scene transitions with crossfades. Remove parallax, zoom and depth movement. Keep pacing through sequence rather than travel.
 
@@ -524,7 +453,7 @@ How each language typically handles common moments. Use this as a starting point
 
 - **One motion language governs the product.** Motion that changes character between views feels inconsistent faster than any other layer.
 - **Scope exceptions tightly.** A Cinematic onboarding in an otherwise Quiet product is fine if it is clearly a separate moment.
-- **Frequency beats language.** Whatever the language, motion on actions repeated many times a day is shortened toward the instant tier.
+- **Frequency beats language.** Whatever the language, motion on actions repeated many times a day is shortened toward instant.
 - **Controls stay stable.** In every language, the elements the user acts with respond quickly, even when content or scenes move slowly.
 
 Written as a line in a project definition:
@@ -535,10 +464,21 @@ Motion: Quiet (product) + Cinematic (onboarding only)
 
 ---
 
+## Timing grows in the product
+
+The motion language describes what motion is for and how it should feel. The specific durations, curves and springs are found by building and trying them.
+
+1. **Start from the character.** Build the first version from the language's tempo, easing and choreography, and from the moments table.
+2. **Judge it in use.** Motion can only be evaluated in the running product: repeated, interrupted, on real content and on slower devices.
+3. **Record what settles.** When a duration or a curve holds up across several moments, record it in the project, as part of its design system or in the recipe. Those values belong to the product, not to the archetype.
+4. **Keep the words as the test.** A settled value is right when the motion still reads as the language describes it. If it does not, change the value, not the language.
+
+---
+
 ## Contributing
 
 - Keep every language in the schema above.
-- Describe timing, easing and behavior, never a specific animation library or platform API.
+- Describe role and character in words. Do not add durations, curves or other values; they belong to each product.
+- Never refer to a specific animation library or platform API.
 - Every language needs an avoid list and a reduced motion section.
 - Add a new language only when a direction cannot be described as an existing language with a different motion dial or a brand signature.
-- Tendencies are starting values. Update them when projects prove them wrong more than once.
