@@ -185,9 +185,9 @@ Then look at the result in the product. If it does not read as the intended dire
 
 The avoid lists and anti-patterns in each chosen archetype are hard constraints, not suggestions. Check work against them before delivering it.
 
-### Check against the generic default and AI slop
+### Check against the generic default
 
-`visual-languages.md` and `motion-languages.md` each describe a generic default look and motion, and [Avoid AI slop](#avoid-ai-slop) below lists common patterns in writing and visual design. If your output shows any of them, and the recipe did not ask for it, revise the output before delivering.
+`visual-languages.md` and `motion-languages.md` each describe a generic default look and motion. If your output shows it, and the recipe did not ask for it, revise the output before delivering.
 
 ### Never break the non-negotiables
 
@@ -200,50 +200,6 @@ One dominant choice per layer governs everything unless a scope says otherwise. 
 ### Do not invent archetypes
 
 Use only archetypes, dials and presets that exist in the repository. If a project seems to need something that is missing, describe it as a combination of existing ones, or propose a change to the repository.
-
----
-
-## Avoid AI slop
-
-Generated work tends to repeat the same patterns in writing and in visual design. They make a product look generated and interchangeable. Treat everything below as banned by default.
-
-A pattern is allowed only when the recipe or the brand explicitly asks for it. Taste input cannot allow it. Record the reason in `recipe.md`. Functional use is not slop: a monospace face for code or tabular data, or numbers for a real sequence of steps, is fine when the visual language supports it.
-
-### Writing
-
-- **Contrast constructions:** "It's not X. It's Y.", "X, not Y.", "Not just X, but Y.", "Less X, more Y."
-- **Slogan fragments:** "Fast. Simple. Powerful." and other rhythmic lists of three
-- **Rhetorical questions** as headlines or openers: "Ready to get started?", "Ever wondered why...?"
-- **Buzzwords:** seamless, effortless, elevate, unlock, empower, supercharge, revolutionize, next-level, game-changer, cutting-edge, robust, harness, leverage, delve, "in today's fast-paced world"
-- **Em dashes** used for rhythm or drama
-- **Vague benefits** without a concrete fact: "boost productivity", "take it to the next level"
-- **Headline and subline saying the same thing** twice in different words
-- **Filler openers and closers:** "Let's dive in", "Here's the thing", "In conclusion"
-- **Emojis** as bullets or decoration
-- **Invented proof:** fake testimonials, customer logos, user counts or statistics
-
-Instead: write plainly and specifically. Name the actual thing, the actual number, the actual action. Use sentence case. When real content is missing, use clearly marked placeholders rather than invented marketing copy.
-
-### Visual
-
-- **Numbered labels** such as "01", "02", "03" on sections, features or cards that are not a real sequence
-- **Overlines:** small labels above headings, especially in all caps with wide letter spacing, repeated on every section
-- **All caps** for labels, buttons, navigation or headings
-- **Monospace as decoration,** used to make something feel technical
-- **Beige, cream or off-white "paper" backgrounds** as a default
-- **Serif italic accent words** inside sans-serif headlines
-- **Badge pills above headlines,** such as "New" or "Introducing"
-- **Purple or blue gradients,** glows, blurred color blobs and glass effects
-- **Grain, noise, dot grids** and other background textures without a brand reason
-- **Icons in tinted rounded squares** on every feature card
-- **Three-column feature grids** as the default way to present content
-- **Big-number stat rows** without real data behind them
-- **Arrows after every link,** such as "Learn more →"
-- **Centered hero** with a headline, a subline and two buttons as the default opening
-
-These add to the generic default described in `visual-languages.md` and `motion-languages.md`. Check both lists.
-
-Instead: let the chosen visual language create hierarchy through its own means, such as size, weight, space, color fields or imagery. Use section labels only when navigation needs them, and numbers only when order matters.
 
 ---
 
@@ -287,7 +243,6 @@ Do not change the archetype files as a side effect of project work. When project
 - [ ] Values follow the language character and the dial directions, and read as intended in the product
 - [ ] Nothing in the chosen avoid lists appears in the output
 - [ ] The output does not drift toward the generic default
-- [ ] No AI slop patterns in writing or visuals, unless the recipe asks for them
 - [ ] All non-negotiables are met
 - [ ] Required states are handled, not only the ideal state
 - [ ] Brand fallbacks and generated values are marked

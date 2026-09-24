@@ -81,7 +81,7 @@ When sources disagree, resolve in this order. Earlier wins.
 
 Refusals are the exception. A refusal still applies when the description and the brand say nothing about it. If a refusal conflicts with the description or the brand, follow them and list the conflict in the recipe.
 
-Taste can tighten the rules but never loosen them. It cannot allow a pattern from the avoid lists, the generic default or the AI slop list in `AGENTS.md`. Only the recipe or the brand can allow those, with a stated reason.
+Taste can tighten the rules but never loosen them. It cannot allow a pattern from the avoid lists or the generic default. Only the recipe or the brand can allow those, with a stated reason.
 
 ---
 
