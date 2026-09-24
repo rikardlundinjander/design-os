@@ -37,23 +37,19 @@ The goal is not a library of templates. Templates reproduce sameness. The goal i
 | 5 | Density and personality | How much of each quality, from 0 to 100? | [density-and-personality.md](archetypes/density-and-personality.md) |
 | 6 | Brand | Which typefaces, colors, imagery, voice and signatures? | [brand.md](archetypes/brand.md) |
 
-Layers 1 to 4 are archetypes: a defined set of options to choose from. Layer 5 is a set of dials. Layer 6 is a template, filled in once per brand.
+Layers 1 to 4 are archetypes: a defined set of options to choose from. Layer 5 is a set of dials. Layer 6 is interpreted from whatever brand material the project has.
 
 ---
 
 ## Starting a project
 
-Work through the layers in order. Structure comes before style.
+1. **Clone or copy this repository.**
+2. **Add brand material, if you have any,** to the `brand/` folder. It can be anything: a logo, a screenshot of a color palette, brand guidelines, font files. Links, such as a component library or an existing website, can go in the description instead. No template to fill in.
+3. **Describe in plain text what you want to build.** Who it is for, what it should do, what it should feel like, and any constraints.
+4. **Let the AI write a recipe.** Following [`AGENTS.md`](AGENTS.md), it chooses from each layer, sets the dials, interprets the brand material and writes the result to `recipe.md`. It asks only questions whose answers would change a choice.
+5. **Review and adjust the recipe,** then build from it.
 
-1. **Product type.** Pick one primary type and up to two secondary types. Use the views, flows and required states as the first scope checklist.
-2. **Experience model.** Pick one dominant model and scope any supporting models to specific views, flows or user groups.
-3. **Visual language.** Pick one dominant language. Add a secondary language only with a clear scope.
-4. **Motion language.** Pick one. Scope exceptions tightly.
-5. **Dials.** Start from the preset for the chosen visual language. Move the three or four dials that matter, and push at least two clearly away from the middle.
-6. **Brand.** Fill in a brand profile from the template, or define a minimum viable brand. Set brand presence per surface.
-7. **Answer the kickoff questions** in each layer. The places where the project differs from the archetypes are usually where the interesting design work is.
-
-The result is a **recipe**: a short definition that people and AI can build from. Start from [`templates/recipe.md`](templates/recipe.md), and see [`examples/`](examples/) for filled-in recipes.
+A recipe looks like this at its core, followed by the reasons for each choice, the interpreted brand, assumptions and open questions:
 
 ```text
 Product:    Service (primary) + Content
@@ -61,7 +57,7 @@ Experience: Workflow (dominant) + Object (case overview)
 Visual:     Neutral
 Motion:     Quiet
 Dials:      density 30, contrast 75, softness 40, depth 15, color 25, warmth 55, expressivity 15, motion 20, novelty 5
-Brand:      <brand-name>, presence present (product), quiet (forms and payment)
+Brand:      logo and one color from brand/, presence present (product), quiet (forms and payment)
 ```
 
 A recipe is a starting point, not a specification. It gives the project something concrete enough to react to, and open enough to become unique.
@@ -103,15 +99,7 @@ design-os/
 │   ├── motion-languages.md
 │   ├── density-and-personality.md
 │   └── brand.md
-├── templates/                files to copy into a project
-│   ├── recipe.md
-│   └── brand-profile.md
-├── brands/                   brand profiles, one file per brand
-│   └── README.md
-└── examples/                 fictional example recipes
-    ├── monitoring-terminal.md
-    ├── public-self-service.md
-    └── learning-app-for-children.md
+└── brand/                    brand material for the project, in any form
 ```
 
 Planned: implementation examples per archetype, such as tokens and reference views, once the text definitions are stable.
@@ -120,9 +108,9 @@ Planned: implementation examples per archetype, such as tokens and reference vie
 
 ## Using Design OS in a project
 
-Clone or copy the repository as the starting point for a project. Keep the archetype files unchanged in the project, and add project-specific files beside them: `recipe.md` at the project root, copied from the template, and the brand profile in `brands/`.
+Keep the archetype files unchanged in the project. Project-specific material lives beside them: brand material in `brand/`, and the recipe in `recipe.md` at the project root, written by the AI and adjusted by you.
 
-When working with AI, point it to [`AGENTS.md`](AGENTS.md). It describes how an agent finds the recipe, which sections of each layer to read, how values are resolved and how to check the work before delivering it.
+Most AI tools read [`AGENTS.md`](AGENTS.md) automatically. It describes how to turn a written description into a recipe, which sections of each layer to read, how values are resolved and how to check the work before delivering it.
 
 ---
 

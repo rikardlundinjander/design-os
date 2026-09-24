@@ -9,3 +9,6 @@ desktop.ini
 .vscode/
 .idea/
 *.swp
+
+# Claude app output folder
+Claude outputs/
