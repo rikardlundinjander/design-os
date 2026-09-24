@@ -20,7 +20,7 @@ Brand is different from the other layers. It is not chosen from a list of archet
 | Experience model | How the user engages | Nothing. Behavior is brand-independent. |
 | Visual language | Character of form, roles of type and color | Which typefaces and hues play those roles |
 | Motion language | Timing, easing, choreography | A signature curve and signature moments, within the language |
-| Dials | How much of each quality | Specific values, where the dial leaves a choice |
+| Dials | The direction of each quality | Specific assets, where the dial leaves a choice |
 
 The principle: **the other layers decide how things are used. Brand decides what is used.**
 

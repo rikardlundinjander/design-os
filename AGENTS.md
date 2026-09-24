@@ -151,7 +151,7 @@ Do not load every file in full for every task. For each layer, read the shared s
 | Experience model | What this layer owns | Navigation, selection and feedback, implications for other layers, anti-patterns |
 | Visual language | What this layer owns, Non-negotiables, The generic default | Principles, Avoid, Tendencies |
 | Motion language | What this layer owns, Non-negotiables, The generic default, Vocabulary | Principles, Avoid, Tendencies, Reduced motion, the column in the Moments table |
-| Dials | Resolution order | The mapping and guardrails for every dial the recipe sets, and the presets table |
+| Dials | From direction to values, Anchoring the dials | The descriptions and guardrails for every dial the recipe sets, and the presets table |
 | Brand | The whole file | Not applicable |
 | Taste | The whole file, when `taste/` has content | The references for the chosen languages |
 
@@ -170,16 +170,16 @@ Each layer owns specific decisions, listed in its "What this layer owns" section
 - Taste fills only what the description and the brand leave open. It never changes structure, behavior or brand assets.
 - The experience model states what motion must communicate. The motion language decides how.
 
-### Resolve values in order
+### Decide values in order
 
-For every concrete value, such as a radius, a text size, a spacing step or a duration:
+Dials are an internal direction, not a measurement. They never calculate a value. For every concrete value, such as a radius, a text size, a spacing step or a duration:
 
-1. Take the range from the visual or motion language.
-2. Place the value within the range using the dial: `value = min + (max - min) × (dial / 100)`.
+1. Start from the character of the visual or motion language.
+2. Lean in the direction the dial describes.
 3. Fill in specific assets from the interpreted brand.
 4. Clamp to the accessibility floor.
 
-Round to the project's grid and type scale. When a dial is outside the language's natural range, apply it and note the tension.
+Then look at the result in the product. If it does not read as the intended direction, change the value. Anchor dial positions in references or in an earlier version, as described in `archetypes/density-and-personality.md`. When a dial is outside the language's natural range, apply it and note the tension.
 
 ### Treat avoid lists as constraints
 
@@ -284,7 +284,7 @@ Do not change the archetype files as a side effect of project work. When project
 
 - [ ] The work follows the recipe, or deviations are stated
 - [ ] No layer made a decision owned by another layer
-- [ ] Values were resolved in order and fit their language ranges
+- [ ] Values follow the language character and the dial directions, and read as intended in the product
 - [ ] Nothing in the chosen avoid lists appears in the output
 - [ ] The output does not drift toward the generic default
 - [ ] No AI slop patterns in writing or visuals, unless the recipe asks for them

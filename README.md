@@ -34,7 +34,7 @@ The goal is not a library of templates. Templates reproduce sameness. The goal i
 | 2 | Experience model | Where does the user's attention live, and who drives? | [experience-models.md](archetypes/experience-models.md) |
 | 3 | Visual language | What carries hierarchy, and what is the character of the form? | [visual-languages.md](archetypes/visual-languages.md) |
 | 4 | Motion language | What is motion for, and how does it behave? | [motion-languages.md](archetypes/motion-languages.md) |
-| 5 | Density and personality | How much of each quality, from 0 to 100? | [density-and-personality.md](archetypes/density-and-personality.md) |
+| 5 | Density and personality | Which direction for each quality, from 0 to 100? | [density-and-personality.md](archetypes/density-and-personality.md) |
 | 6 | Brand | Which typefaces, colors, imagery, voice and signatures? | [brand.md](archetypes/brand.md) |
 
 Layers 1 to 4 are archetypes: a defined set of options to choose from. Layer 5 is a set of dials. Layer 6 is interpreted from whatever brand material the project has.
@@ -68,14 +68,16 @@ A recipe is a starting point, not a specification. It gives the project somethin
 
 ---
 
-## How values are resolved
+## How values are decided
 
-Every concrete value, such as a radius, a duration or a text size, is resolved in the same order:
+Dials are an internal direction, not a measurement. "Density 80" means clearly toward compact for this product, and it is anchored in references or an earlier version, not converted to a number. Every concrete value, such as a radius, a duration or a text size, is decided in the same order:
 
-1. **Language range.** The visual or motion language sets the allowed range.
-2. **Dial position.** The dial picks a point within that range.
+1. **Language character.** The visual or motion language says what kind of value fits.
+2. **Dial direction.** The dial says which way to lean, and how far.
 3. **Brand.** Supplies the specific assets where a choice remains.
 4. **Accessibility floor.** Clamps anything that would break contrast, legibility, target size or reduced motion. It always wins.
+
+Values are then judged in the product, where they can be seen.
 
 ---
 
@@ -116,7 +118,7 @@ Planned: implementation examples per archetype, such as tokens and reference vie
 
 Keep the archetype files unchanged in the project. Project-specific material lives beside them: brand material in `brand/`, taste in `taste/`, and the recipe in `recipe.md` at the project root, written by the AI and adjusted by you.
 
-Most AI tools read [`AGENTS.md`](AGENTS.md) automatically. It describes how to turn a written description into a recipe, which sections of each layer to read, how values are resolved and how to check the work before delivering it.
+Most AI tools read [`AGENTS.md`](AGENTS.md) automatically. It describes how to turn a written description into a recipe, which sections of each layer to read, how values are decided and how to check the work before delivering it.
 
 ---
 

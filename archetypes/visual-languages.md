@@ -34,7 +34,7 @@ Editorial at high density becomes a newspaper. Editorial at low density becomes 
 1. **Pick one dominant visual language.** It governs every surface unless a scope says otherwise.
 2. **Optionally add one secondary language, with a scope.** Example: "Editorial for marketing and content pages, Precision for the signed-in product." Never blend two languages on the same surface without a stated rule for which one wins.
 3. **Copy the principles and the avoid list into the project.** The avoid list is the most important part when working with AI, because it stops output from drifting toward the generic default.
-4. **Calibrate with the tendencies table.** It translates the language into starting ranges for tokens. Density and personality dials then adjust within those ranges.
+4. **Calibrate with the tendencies table.** It describes the kind of values that fit the language. Density and personality dials then say which way to lean within them.
 5. **Let brand fill in the specifics.** Typefaces, color values and imagery come from the brand layer and should fit the chosen language.
 
 If you cannot decide, answer this: *what should carry the hierarchy on a typical screen: type, space, color, containers or imagery?* The answer narrows the choice quickly.
