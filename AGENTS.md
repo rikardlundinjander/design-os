@@ -10,7 +10,9 @@ This file tells AI agents how to use Design OS. It applies to any tool or model 
 2. The user adds any brand material they have to the `brand/` folder. This can be anything: a logo, a screenshot of a palette, guidelines, font files, or nothing at all. Optionally, they add references to the `taste/` folder: a direction chosen with a client, their own references, screenshots, UI elements, or examples of what to avoid.
 3. The user describes in written text what they want to build. The description may also contain links, such as a component library, an existing website or a design file.
 4. **You** turn the description, the brand material and any references into a recipe, and write it to `recipe.md` at the project root.
-5. The user reviews and adjusts the recipe. Only then do you build from it.
+5. The user reviews and adjusts the recipe.
+6. If the direction is still open, or the user asks for alternatives, you explore it in tracks, following `process/exploration.md`, and the user chooses.
+7. Only then do you build from the recipe.
 
 The user does not fill in templates. Your job is to interpret free-form input and make the choices explicit.
 
@@ -30,6 +32,12 @@ Design OS describes digital products as combinations of six independent layers:
 | 6 | Brand | `archetypes/brand.md` | Interpret brand input |
 
 The taste model in `archetypes/taste.md` is not a layer. It is the quality bar that applies to every project: principles of good design, signal and noise, anti-patterns and critique. It also describes how to read the references in `taste/`. It never changes structure or brand.
+
+The `process/` folder describes how work moves from recipe to product:
+
+| Process | File | Use when |
+|---|---|---|
+| Exploration | `process/exploration.md` | The direction should be compared and chosen between several tracks |
 
 ---
 
@@ -205,6 +213,19 @@ One dominant choice per layer governs everything unless a scope says otherwise. 
 ### Do not invent archetypes
 
 Use only archetypes, dials and presets that exist in the repository. If a project seems to need something that is missing, describe it as a combination of existing ones, or propose a change to the repository.
+
+---
+
+## Exploring directions
+
+When the user asks for directions, alternatives, options or an exploration, or before a workshop where the direction will be chosen, follow `process/exploration.md`:
+
+- Explore from a recipe, never without one.
+- Keep product type, experience model, content, brand assets, non-negotiables and the taste model locked, unless the user asks to explore structure. Product type is always locked.
+- Build three tracks by default, Closest, Stretch and Challenge, with a thesis each, and check that every pair differs enough.
+- Build the same one to three key views with the same real content in every track, to the same level of finish.
+- Critique every track, compare them in one table, and give an opinion labeled as such. Never choose on the user's behalf.
+- After the choice, update the recipe, log the decision and park the other tracks.
 
 ---
 

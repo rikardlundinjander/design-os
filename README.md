@@ -50,7 +50,9 @@ Layers 1 to 4 are archetypes: a defined set of options to choose from. Layer 5 i
 3. **Add references, if you have any,** to the `taste/` folder: a direction chosen with a client, screenshots, UI elements, examples of what to avoid, and notes on what to take from them. Keep screenshots of other people's work out of public repositories.
 4. **Describe in plain text what you want to build.** Who it is for, what it should do, what it should feel like, and any constraints.
 5. **Let the AI write a recipe.** Following [`AGENTS.md`](AGENTS.md), it chooses from each layer, sets the dials, interprets the brand material, reads any references, and writes the result to `recipe.md`. It asks only questions whose answers would change a choice.
-6. **Review and adjust the recipe,** then build from it.
+6. **Review and adjust the recipe.**
+7. **Explore, if the direction is open.** The AI builds a few tracks from the recipe, following [exploration.md](process/exploration.md): the closest version, one that stretches it and one that challenges it, each with the same key views. You choose, and the recipe is updated.
+8. **Build from the recipe.**
 
 A recipe looks like this at its core, followed by the reasons for each choice, the interpreted brand, assumptions and open questions:
 
@@ -98,7 +100,9 @@ Values are then judged in the product, where they can be seen.
 design-os/
 ├── README.md                 this file
 ├── AGENTS.md                 instructions for AI agents
-├── archetypes/               the six layers
+├── process/                  how work moves from recipe to product
+│   └── exploration.md
+├── archetypes/               the six layers and the taste model
 │   ├── product-types.md
 │   ├── experience-models.md
 │   ├── visual-languages.md
