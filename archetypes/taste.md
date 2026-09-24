@@ -1,6 +1,6 @@
 ---
 layer: taste
-version: 0.2
+version: 0.3
 status: draft
 ---
 
@@ -23,6 +23,7 @@ The taste model applies to every project. It holds general principles, not a hou
 | Visual language | Character of form | How well that character is carried out |
 | Motion language | Role and character of motion | Whether motion earns its place |
 | Dials | Direction of each quality | Anchors for the positions, read from references |
+| Project references | How the product is expressed, when a project has them | The method for reading them |
 | Brand | Which assets are used | Nothing. Brand belongs to the product. |
 
 The principle: **the layers decide what the product should be. The taste model judges how well it is done.**
@@ -141,7 +142,7 @@ Critique is how the taste model is applied to a result. Run it on every version 
 2. **Principles.** Go through the principles of good design. Name the ones that are not met.
 3. **Signal and noise.** Run the tests. List what can be removed.
 4. **Anti-patterns.** List every anti-pattern present that the recipe does not justify.
-5. **Specificity.** Name what makes this result specific. If nothing does, say so: the result is correct but generic.
+5. **Specificity.** Name what makes this result specific. If nothing does, say so: the result is correct but generic. When the project has references, name the signatures the result translates; if none can be seen, the direction has not come through.
 
 **Dimensions to judge:** hierarchy, composition, typography, rhythm, density, restraint, specificity and coherence.
 
@@ -201,7 +202,7 @@ Individual readings become useful when they are compared.
 
 ### The result
 
-Summarize a set as a **reading**: five to ten statements, each with the references it rests on and a confidence level, plus the closest visual and motion language and the dial directions. Present it to the user and let them correct it. Corrections are stronger evidence than the references themselves.
+Summarize a set as a **reading**: five to ten statements, each with the references it rests on and a confidence level, plus the closest visual and motion language, the dial directions and two to four signatures. Present it to the user and let them correct it. Corrections are stronger evidence than the references themselves.
 
 ---
 
@@ -218,25 +219,59 @@ Place files in the `taste/` folder, and mention links in the written project des
 
 **Images of other people's work stay private.** Keep screenshots out of public repositories. Links and written notes can be shared.
 
-Read the references with the method above, and use the reading as follows:
+Read the references with the method above, and apply the reading as follows.
 
-| From the reading | Used for |
+### References own the expression
+
+When a project has references, they are not a tiebreaker. They decide **how the product is expressed**, and brand decides **what it is expressed with**.
+
+| References decide | Brand decides |
 |---|---|
-| Closest visual and motion language | Choosing the languages when the description leaves them open |
-| Dial directions | Shifting the dial starting positions, within the language's natural range |
+| Visual and motion language | Typefaces |
+| Dial directions | Colors and color scales |
+| Composition and grid | Logo and distinctive assets |
+| Typographic hierarchy: scale, contrast, rhythm | Imagery sources and icon set |
+| Treatment of imagery: scale, cropping, placement | Tone of voice |
+| Signatures | Signature motion defined by the brand |
+
+The project description wins where it is explicit about expression, for example "it must feel like a public service". Vague words such as "modern" or "premium" do not override the references; the references show what those words mean for this project. The non-negotiables always win.
+
+When the brand comes with rules about expression, such as layout rules in guidelines or an existing design system, weigh them against the references with the follow-or-evolve decision in `brand.md`. Until that is decided, follow the references for expression and list the conflict as an open question.
+
+### How the reading is applied
+
+| From the reading | Applied as |
+|---|---|
+| Closest visual and motion language | The languages of the recipe, unless the description names others |
+| Dial directions | The starting positions of the dials. Presets apply only to dials the reading says nothing about |
+| Signatures | Translated into every key view (see below) |
+| Invariants | Project principles in the recipe, checked in critique |
 | Absences and "not this" examples | Added to the avoid lists for the project, once confirmed |
-| Invariants | Project principles in the recipe |
 | References per language | Anchors for the dials and calibration while building |
 
-**Precedence.** When sources disagree, earlier wins:
+**Natural ranges do not stop the references.** If the references are denser, softer or more saturated than the chosen language usually is, follow the references and record the tension in the recipe. Those tensions are often where the product's own expression is.
+
+**Anti-patterns can be part of a direction.** If a pattern from the anti-patterns is an invariant or a signature of the reference set, it may be used. Record it in the recipe with the references it comes from. A pattern that appears in only one reference does not qualify.
+
+### Translating signatures
+
+Signatures are what make a direction recognizable. The reading names **two to four signatures**: details that recur across the set, or that the user points out as the reason a reference was chosen.
+
+- **Every key view translates one or two signatures.** A key view with none has not taken the direction.
+- **Translate the form, not the surface.** Take what the signature does, such as how a large number sits against small labels, and apply it to this product's content and brand. Never reproduce the reference's layout, assets or copy.
+- **Name them.** The recipe lists the signatures, and each built view states which ones it translates and how.
+- **Check them in critique.** Under specificity, name the signatures the result translates. If they cannot be seen, the direction has not come through.
+
+### Precedence
+
+When sources disagree about expression, earlier wins:
 
 1. **Non-negotiables.** Accessibility is never traded for taste.
-2. **The project description.** What the user asks for in this project.
-3. **Brand.** The product's assets and rules.
-4. **Project references.** The reading of the references in `taste/`.
-5. **The taste model and archetype defaults.** Principles, anti-patterns, presets and fallbacks.
+2. **The project description,** where it is explicit.
+3. **Project references.** The reading of the references in `taste/`.
+4. **The taste model and archetype defaults.** Principles, anti-patterns, presets and fallbacks.
 
-References can tighten the rules but never loosen them. They cannot allow a pattern from the avoid lists, the anti-patterns or the generic default. Only the recipe or the brand can allow those, with a stated reason.
+Brand assets are not part of this order. They come from the brand.
 
 ---
 

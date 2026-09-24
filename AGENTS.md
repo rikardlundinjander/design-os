@@ -57,12 +57,13 @@ Work from structure to style: product type, experience model, visual language, m
 For each layer, read its "How to use this file" section and the sections listed under [Reading the layers](#reading-the-layers). Then:
 
 - Pick the choice that fits the description best, following the layer's rules: one primary or dominant choice, and supporting choices only with a scope.
+- For the visual and motion language, when the project has references, take the languages from their reading, unless the description names others.
 - Write down why, referring to what the description said.
 - Note where the project differs from the archetype. That is usually where the interesting design work is.
 
 ### 3. Set the dials
 
-Start from the preset for the chosen visual language. If there are project references, shift the starting positions toward the dial directions in their reading, within the language's natural range. Then move only the dials the description gives a reason to move. Push at least two dials clearly away from the middle, as the dials file requires.
+When the project has references, start from the dial directions in their reading. Use the preset for the chosen visual language only for dials the reading says nothing about, or when there are no references. References may place a dial outside the language's natural range; record the tension. Then move only the dials the description gives an explicit reason to move. Push at least two dials clearly away from the middle, as the dials file requires.
 
 ### 4. Interpret the brand
 
@@ -70,7 +71,7 @@ Follow the four steps in `archetypes/brand.md`: inventory, extract, fill gaps, c
 
 ### 5. Read the references
 
-If `taste/` has content, analyze it with the method in `archetypes/taste.md`: read each reference, then the set, and summarize it as a reading. References yield to the description and the brand. Use the reading to choose languages where the description leaves them open, to shift dial starting positions, and to add confirmed absences to the avoid lists. Present the reading with the recipe so the user can correct it. Skip this step when there are no references.
+If `taste/` has content, analyze it with the method in `archetypes/taste.md`: read each reference, then the set, and summarize it as a reading with two to four signatures. References own the expression of the product: languages, dials, composition, typographic hierarchy, treatment of imagery and signatures. Brand owns the assets. Only an explicit statement in the description overrides the references. Present the reading with the recipe so the user can correct it. Skip this step when there are no references.
 
 ### 6. Ask only what changes the choices
 
@@ -125,8 +126,10 @@ For each layer: the choice, the scope of any supporting choice, why, and how the
 
 - **Sources:** <references, links and notes used>
 - **Reading:** <five to ten statements, each with the references it rests on and a confidence level>
-- **Applied:** <choices, dial shifts and added avoid rules, and what they came from>
-- **Yielded:** <where the references gave way to the description or the brand>
+- **Signatures:** <two to four signatures, each with the references it comes from>
+- **Applied:** <languages, dial positions, principles and avoid rules taken from the reading>
+- **Tensions:** <where the references go outside a language's natural range, or use an anti-pattern, and why>
+- **Yielded:** <where the references gave way to an explicit statement in the description>
 
 ## Project principles
 
@@ -176,7 +179,7 @@ Each layer owns specific decisions, listed in its "What this layer owns" section
 
 - Product type and experience model decide structure and behavior. Brand never changes them.
 - Visual language decides the character of form. Dials decide the amount. Brand decides the specific assets.
-- The taste model judges how well the layers are carried out. Project references fill only what the description and the brand leave open. Neither changes structure, behavior or brand assets.
+- The taste model judges how well the layers are carried out. Project references decide the expression: languages, dials, composition, typographic hierarchy, treatment of imagery and signatures. Brand decides the assets. Neither the taste model nor the references change structure or behavior.
 - The experience model states what motion must communicate. The motion language decides how.
 
 ### Decide values in order
@@ -236,9 +239,10 @@ When the user asks for directions, alternatives, options or an exploration, or b
 3. Apply the visual language and dials: hierarchy, composition, shape, surface, color roles, density.
 4. Apply the motion language to every state change.
 5. Apply the brand at the presence level for the surface.
-6. Design the required states, not only the ideal state.
-7. Critique the result as described in `archetypes/taste.md`, and revise before delivering.
-8. Run the self-check below.
+6. When the project has references, translate one or two of their signatures into each key view, and state which.
+7. Design the required states, not only the ideal state.
+8. Critique the result as described in `archetypes/taste.md`, and revise before delivering.
+9. Run the self-check below.
 
 When generating tokens, structure them in three levels: primitives from the brand, semantic roles from the visual language and dials, and component values from all layers combined. Report every value clamped by the accessibility floor.
 
@@ -275,5 +279,5 @@ Do not change the archetype files as a side effect of project work. When project
 - [ ] Brand fallbacks and generated values are marked
 - [ ] The result passes the signal and noise tests, and every anti-pattern present has a stated reason
 - [ ] The result has at least one decision that makes it specific
-- [ ] Project references were used only where the description and the brand left room, and every use is recorded
+- [ ] When the project has references, the expression follows their reading, and each key view translates one or two named signatures
 - [ ] Assumptions and tensions are listed

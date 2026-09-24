@@ -39,7 +39,7 @@ The goal is not a library of templates. Templates reproduce sameness. The goal i
 
 Layers 1 to 4 are archetypes: a defined set of options to choose from. Layer 5 is a set of dials. Layer 6 is interpreted from whatever brand material the project has.
 
-**Taste**, described in [taste.md](archetypes/taste.md), is the quality bar of the system rather than a layer. It holds general principles of good design, the difference between signal and noise, anti-patterns and a method for critique, and it applies to every project. It also describes how to read references, so that a project can bring its own direction, such as one chosen with a client, without copying it.
+**Taste**, described in [taste.md](archetypes/taste.md), is the quality bar of the system rather than a layer. It holds general principles of good design, the difference between signal and noise, anti-patterns and a method for critique, and it applies to every project. It also describes how to read references. When a project brings references, such as a direction chosen with a client, they decide how the product is expressed, and the brand decides what it is expressed with.
 
 ---
 

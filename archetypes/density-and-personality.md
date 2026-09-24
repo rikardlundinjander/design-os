@@ -31,7 +31,7 @@ Editorial at density 80 becomes a newspaper. Editorial at density 20 becomes a m
 
 ## How to use this file
 
-1. **Start from the preset** for the chosen visual language (see [Presets](#presets)).
+1. **Start from the reading of the project references,** if there are any (see `taste.md`). Otherwise, start from the preset for the chosen visual language (see [Presets](#presets)).
 2. **Move the dials that matter** for this product. Most projects adjust three or four dials and leave the rest at the preset.
 3. **Push at least two dials away from the middle.** A product with every dial near 50 lands on the generic default. Character comes from clear positions: at least two dials at 25 or below, or 75 or above.
 4. **Anchor the positions** in something visible before building on them (see [Anchoring the dials](#anchoring-the-dials)).

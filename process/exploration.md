@@ -54,6 +54,8 @@ The challenge track is a serious proposal, not a contrast to make the others loo
 
 More tracks are possible when the user asks for them. Each extra track needs its own thesis. Five tracks is the useful maximum; beyond that, the comparison becomes the work.
 
+**With references.** When the project has references, every track takes its direction from them and translates their signatures. The roles then apply to the reading: Closest follows it, Stretch pushes its signatures further, and Challenge questions one thing in it.
+
 **Naming.** Tracks are named by letter and a short name, such as `B: Editorial scale`. The letters stay fixed for the whole project, so later work can refer to them: "the navigation from C".
 
 ---
@@ -91,6 +93,10 @@ Each track has a short file at `explorations/<letter>-<name>/track.md` in the pr
 Visual:     Editorial (was Neutral)
 Dials:      contrast 85 (was 60), expressivity 70 (was 30)
 ```
+
+## Signatures
+
+<When the project has references: which signatures this track translates, and how.>
 
 ## Why it could work
 
