@@ -53,7 +53,7 @@ Work through the layers in order. Structure comes before style.
 6. **Brand.** Fill in a brand profile from the template, or define a minimum viable brand. Set brand presence per surface.
 7. **Answer the kickoff questions** in each layer. The places where the project differs from the archetypes are usually where the interesting design work is.
 
-The result is a **recipe**: a short definition that people and AI can build from.
+The result is a **recipe**: a short definition that people and AI can build from. Start from [`templates/recipe.md`](templates/recipe.md), and see [`examples/`](examples/) for filled-in recipes.
 
 ```text
 Product:    Service (primary) + Content
@@ -94,30 +94,35 @@ Every concrete value, such as a radius, a duration or a text size, is resolved i
 
 ```text
 design-os/
-├── README.md
-└── archetypes/
-    ├── product-types.md
-    ├── experience-models.md
-    ├── visual-languages.md
-    ├── motion-languages.md
-    ├── density-and-personality.md
-    └── brand.md
+├── README.md                 this file
+├── AGENTS.md                 instructions for AI agents
+├── archetypes/               the six layers
+│   ├── product-types.md
+│   ├── experience-models.md
+│   ├── visual-languages.md
+│   ├── motion-languages.md
+│   ├── density-and-personality.md
+│   └── brand.md
+├── templates/                files to copy into a project
+│   ├── recipe.md
+│   └── brand-profile.md
+├── brands/                   brand profiles, one file per brand
+│   └── README.md
+└── examples/                 fictional example recipes
+    ├── monitoring-terminal.md
+    ├── public-self-service.md
+    └── learning-app-for-children.md
 ```
 
-Planned:
-
-- `recipe-template.md`: a template for defining a project from the layers
-- `AGENTS.md`: instructions for how AI tools should read and apply the repository
-- `brands/`: brand profiles, one file per brand
-- Implementation examples per archetype, such as tokens and reference views, once the text definitions are stable
+Planned: implementation examples per archetype, such as tokens and reference views, once the text definitions are stable.
 
 ---
 
 ## Using Design OS in a project
 
-Clone or copy the repository as the starting point for a project. Keep the archetype files unchanged in the project, and add project-specific files beside them: the recipe, the brand profile and any project principles.
+Clone or copy the repository as the starting point for a project. Keep the archetype files unchanged in the project, and add project-specific files beside them: `recipe.md` at the project root, copied from the template, and the brand profile in `brands/`.
 
-When working with AI, give it the recipe and point it to the relevant sections of each layer rather than the whole repository. The most useful parts to include are the principles, the avoid lists and the tendencies.
+When working with AI, point it to [`AGENTS.md`](AGENTS.md). It describes how an agent finds the recipe, which sections of each layer to read, how values are resolved and how to check the work before delivering it.
 
 ---
 
