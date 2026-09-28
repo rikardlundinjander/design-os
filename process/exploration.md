@@ -29,6 +29,7 @@ By default, exploration varies the **form** of the product and keeps its **struc
 
 | Locked by default | Open in every track |
 |---|---|
+| Constraints | The idea and the art direction |
 | Product type | Visual language |
 | Experience model | Motion language |
 | Content and key tasks | Dials |
@@ -48,7 +49,7 @@ Three tracks is the default. Each has a role.
 |---|---|---|
 | **A: Closest** | The strongest version of the recipe as written | "This is what the recipe asks for, done well." |
 | **B: Stretch** | Pushes the recipe further in a direction it already points | "What if we go further on what makes this product specific?" |
-| **C: Challenge** | Questions one choice in the recipe, and records it as a deliberate tension | "What if the recipe is wrong about this one thing?" |
+| **C: Challenge** | Questions one choice in the recipe or the idea itself, and records it as a deliberate tension | "What if the recipe is wrong about this one thing?" |
 
 The challenge track is a serious proposal, not a contrast to make the others look good. If it would never be chosen, it is not a challenge; replace its thesis.
 
@@ -62,7 +63,7 @@ More tracks are possible when the user asks for them. Each extra track needs its
 
 ## How different is different enough
 
-Tracks must offer a real choice. Every pair of tracks differs in at least two of these:
+Tracks must offer a real choice. A different **idea** is the largest difference two tracks can have, and counts on its own, as long as the art direction follows it. Otherwise, every pair of tracks differs in at least two of these:
 
 - The dominant visual language
 - The motion language
@@ -85,6 +86,7 @@ Each track has a short file at `explorations/<letter>-<name>/track.md` in the pr
 
 **Role:** Stretch
 **Thesis:** <one sentence: what this direction bets on>
+**Idea:** <the idea, if it differs from direction.md>
 **Status:** open | chosen | parked
 
 ## Differs from the recipe
@@ -166,7 +168,7 @@ A choice can take three forms:
 
 ## After the choice
 
-1. **Update the recipe.** Apply the chosen track's differences, and any borrowed qualities, to `recipe.md`.
+1. **Update the recipe and the direction.** Apply the chosen track's differences, and any borrowed qualities, to `recipe.md` and `direction.md`.
 2. **Log the decision.** Add a line to the decision log: which track was chosen, over which, and why.
 3. **Park the others.** Set their status to parked. Keep the files and the previews; they are the history of the direction and can be borrowed from later.
 4. **Keep the reactions.** What the client or the team reacted to, for or against, is a strong reference. Add notes to `taste/`, so the next reading of the references includes them.

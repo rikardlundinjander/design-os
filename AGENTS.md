@@ -9,8 +9,8 @@ This file tells AI agents how to use Design OS. It applies to any tool or model 
 1. The user clones or copies this repository.
 2. The user adds any brand material they have to the `brand/` folder. This can be anything: a logo, a screenshot of a palette, guidelines, font files, or nothing at all. Optionally, they add references to the `taste/` folder: a direction chosen with a client, their own references, screenshots, UI elements, or examples of what to avoid.
 3. The user describes in written text what they want to build. The description may also contain links, such as a component library, an existing website or a design file.
-4. **You** turn the description, the brand material and any references into a recipe, and write it to `recipe.md` at the project root.
-5. The user reviews and adjusts the recipe.
+4. **You** turn the description, the brand material and any references into a recipe and a direction, and write them to `recipe.md` and `direction.md` at the project root.
+5. The user reviews and adjusts the recipe and the direction.
 6. If the direction is still open, or the user asks for alternatives, you explore it in tracks, following `process/exploration.md`, and the user chooses.
 7. Only then do you build from the recipe.
 
@@ -37,6 +37,7 @@ The `process/` folder describes how work moves from recipe to product:
 
 | Process | File | Use when |
 |---|---|---|
+| Direction | `process/direction.md` | Always: every project gets an idea and an art direction |
 | Exploration | `process/exploration.md` | The direction should be compared and chosen between several tracks |
 
 ---
@@ -45,7 +46,7 @@ The `process/` folder describes how work moves from recipe to product:
 
 ### 1. Read the input
 
-- The written project description
+- The written project description, including every hard requirement in it: these become the constraints
 - Everything in `brand/`, and every link mentioned in the description
 - Everything in `taste/`, if the folder has content
 - An existing `recipe.md`, if the project already has one; update it rather than starting over
@@ -71,15 +72,19 @@ Follow the four steps in `archetypes/brand.md`: inventory, extract, fill gaps, c
 
 ### 5. Read the references
 
-If `taste/` has content, analyze it with the method in `archetypes/taste.md`: read each reference, then the set, and summarize it as a reading with two to four signatures. References own the expression of the product: languages, dials, composition, typographic hierarchy, treatment of imagery and signatures. Brand owns the assets. Only an explicit statement in the description overrides the references. Present the reading with the recipe so the user can correct it. Skip this step when there are no references.
+If `taste/` has content, analyze it with the method in `archetypes/taste.md`: read each reference, then the set, and summarize it as a reading with two to four signatures. The reading sets the languages and dial starting positions, and it is the main evidence for the art direction. Only an explicit statement in the description overrides it. Present the reading with the recipe so the user can correct it. Skip this step when there are no references.
 
-### 6. Ask only what changes the choices
+### 6. Write the direction
+
+Follow `process/direction.md`. Find the idea: write three or four candidates from the brief, test them, and keep one; the others are material for exploration. Then write the art direction: concrete rules per area, each with its source, and the signatures. The art direction owns the expression of the product, within the recipe and the constraints. Brand owns the assets.
+
+### 7. Ask only what changes the choices
 
 Do not ask the user to answer every kickoff question. Ask only when the answer would change a choice in the recipe, and ask all such questions at once. Everything else becomes an assumption, stated in the recipe.
 
-### 7. Write the recipe
+### 8. Write the recipe and the direction
 
-Write `recipe.md` using the format below, and present it to the user for review.
+Write `recipe.md` using the format below, and `direction.md` using the format in `process/direction.md`. Present both to the user for review.
 
 ---
 
@@ -98,11 +103,16 @@ Motion:     <language> + <exception> (<scope>)
 Dials:      density <n>, contrast <n>, softness <n>, depth <n>, color <n>, warmth <n>, expressivity <n>, motion <n>, novelty <n>
 Brand:      <short summary of sources>, presence <level> (<surface>), <level> (<surface>)
 Taste:      <reference sources, or none>, applied to <choices, dials, avoid lists>
+Idea:       <the one-sentence idea from direction.md>
 ```
 
 ## What we are building
 
-<Your interpretation of the description in a few sentences: users, core job, what success looks like, constraints.>
+<Your interpretation of the description in a few sentences: users, core job, what success looks like.>
+
+## Constraints
+
+<Hard requirements from the description and the brand, such as required content, platforms, technical limits or a fixed typeface. They are not interpreted creatively. If a constraint conflicts with a choice, the constraint wins.>
 
 ## Choices
 
@@ -126,7 +136,6 @@ For each layer: the choice, the scope of any supporting choice, why, and how the
 
 - **Sources:** <references, links and notes used>
 - **Reading:** <five to ten statements, each with the references it rests on and a confidence level>
-- **Signatures:** <two to four signatures, each with the references it comes from>
 - **Applied:** <languages, dial positions, principles and avoid rules taken from the reading>
 - **Tensions:** <where the references go outside a language's natural range, or use an anti-pattern, and why>
 - **Yielded:** <where the references gave way to an explicit statement in the description>
@@ -173,13 +182,17 @@ For secondary or supporting choices, read the same sections and apply them only 
 
 ## Rules
 
+### Respect constraints
+
+The constraints in the recipe are mandatory. Never interpret them creatively, and never trade them for a design choice. Only the non-negotiables rank above them.
+
 ### Respect layer ownership
 
 Each layer owns specific decisions, listed in its "What this layer owns" section. Never let one layer make a decision that belongs to another.
 
 - Product type and experience model decide structure and behavior. Brand never changes them.
 - Visual language decides the character of form. Dials decide the amount. Brand decides the specific assets.
-- The taste model judges how well the layers are carried out. Project references decide the expression: languages, dials, composition, typographic hierarchy, treatment of imagery and signatures. Brand decides the assets. Neither the taste model nor the references change structure or behavior.
+- The direction gives the product its idea. The art direction decides the expression, informed by the references; brand decides the assets. The taste model judges how well it is done. None of them change structure or behavior.
 - The experience model states what motion must communicate. The motion language decides how.
 
 ### Decide values in order
@@ -239,7 +252,7 @@ When the user asks for directions, alternatives, options or an exploration, or b
 3. Apply the visual language and dials: hierarchy, composition, shape, surface, color roles, density.
 4. Apply the motion language to every state change.
 5. Apply the brand at the presence level for the surface.
-6. When the project has references, translate one or two of their signatures into each key view, and state which.
+6. Express the direction: before each view, state in one line how the idea shows in it, and translate one or two signatures from the art direction.
 7. Design the required states, not only the ideal state.
 8. Critique the result as described in `archetypes/taste.md`, and revise before delivering.
 9. Run the self-check below.
@@ -279,5 +292,6 @@ Do not change the archetype files as a side effect of project work. When project
 - [ ] Brand fallbacks and generated values are marked
 - [ ] The result passes the signal and noise tests, and every anti-pattern present has a stated reason
 - [ ] The result has at least one decision that makes it specific
-- [ ] When the project has references, the expression follows their reading, and each key view translates one or two named signatures
+- [ ] All constraints are met
+- [ ] Each key view expresses the idea and translates one or two named signatures from the art direction
 - [ ] Assumptions and tensions are listed

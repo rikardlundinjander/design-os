@@ -1,6 +1,6 @@
 ---
 layer: taste
-version: 0.3
+version: 0.4
 status: draft
 ---
 
@@ -138,11 +138,12 @@ Critique is how the taste model is applied to a result. Run it on every version 
 
 **Order:**
 
-1. **Recipe fit.** Does the result follow the chosen layers, dials and brand? Report deviations by layer, and whether each looks deliberate.
-2. **Principles.** Go through the principles of good design. Name the ones that are not met.
-3. **Signal and noise.** Run the tests. List what can be removed.
-4. **Anti-patterns.** List every anti-pattern present that the recipe does not justify.
-5. **Specificity.** Name what makes this result specific. If nothing does, say so: the result is correct but generic. When the project has references, name the signatures the result translates; if none can be seen, the direction has not come through.
+1. **Recipe fit.** Does the result follow the constraints, the chosen layers, dials and brand? Report deviations by layer, and whether each looks deliberate.
+2. **Direction.** Does the result express the idea, and follow the art direction? A result that follows every rule but does not express the idea has not found the direction.
+3. **Principles.** Go through the principles of good design. Name the ones that are not met.
+4. **Signal and noise.** Run the tests. List what can be removed.
+5. **Anti-patterns.** List every anti-pattern present that the recipe or the direction does not justify.
+6. **Specificity.** Name what makes this result specific. If nothing does, say so: the result is correct but generic. When the project has references, name the signatures the result translates; if none can be seen, the direction has not come through.
 
 **Dimensions to judge:** hierarchy, composition, typography, rhythm, density, restraint, specificity and coherence.
 
@@ -221,11 +222,11 @@ Place files in the `taste/` folder, and mention links in the written project des
 
 Read the references with the method above, and apply the reading as follows.
 
-### References own the expression
+### References feed the art direction
 
-When a project has references, they are not a tiebreaker. They decide **how the product is expressed**, and brand decides **what it is expressed with**.
+When a project has references, they are not a tiebreaker. They are the main evidence for the **art direction** in `direction.md`, which decides **how the product is expressed**, while brand decides **what it is expressed with**. See `process/direction.md`.
 
-| References decide | Brand decides |
+| Art direction decides, informed by the references | Brand decides |
 |---|---|
 | Visual and motion language | Typefaces |
 | Dial directions | Colors and color scales |
@@ -234,7 +235,7 @@ When a project has references, they are not a tiebreaker. They decide **how the 
 | Treatment of imagery: scale, cropping, placement | Tone of voice |
 | Signatures | Signature motion defined by the brand |
 
-The project description wins where it is explicit about expression, for example "it must feel like a public service". Vague words such as "modern" or "premium" do not override the references; the references show what those words mean for this project. The non-negotiables always win.
+The project description wins where it is explicit about expression, for example "it must feel like a public service". Vague words such as "modern" or "premium" do not override the references; the references show what those words mean for this project. The constraints and the non-negotiables always win.
 
 When the brand comes with rules about expression, such as layout rules in guidelines or an existing design system, weigh them against the references with the follow-or-evolve decision in `brand.md`. Until that is decided, follow the references for expression and list the conflict as an open question.
 
@@ -244,8 +245,8 @@ When the brand comes with rules about expression, such as layout rules in guidel
 |---|---|
 | Closest visual and motion language | The languages of the recipe, unless the description names others |
 | Dial directions | The starting positions of the dials. Presets apply only to dials the reading says nothing about |
-| Signatures | Translated into every key view (see below) |
-| Invariants | Project principles in the recipe, checked in critique |
+| Signatures | The signatures of the art direction, translated into every key view (see below) |
+| Invariants | Rules in the art direction, checked in critique |
 | Absences and "not this" examples | Added to the avoid lists for the project, once confirmed |
 | References per language | Anchors for the dials and calibration while building |
 
@@ -259,7 +260,7 @@ Signatures are what make a direction recognizable. The reading names **two to fo
 
 - **Every key view translates one or two signatures.** A key view with none has not taken the direction.
 - **Translate the form, not the surface.** Take what the signature does, such as how a large number sits against small labels, and apply it to this product's content and brand. Never reproduce the reference's layout, assets or copy.
-- **Name them.** The recipe lists the signatures, and each built view states which ones it translates and how.
+- **Name them.** The art direction lists the signatures, and each built view states which ones it translates and how. The idea can add signatures of its own; the art direction names where each comes from.
 - **Check them in critique.** Under specificity, name the signatures the result translates. If they cannot be seen, the direction has not come through.
 
 ### Precedence
@@ -267,9 +268,11 @@ Signatures are what make a direction recognizable. The reading names **two to fo
 When sources disagree about expression, earlier wins:
 
 1. **Non-negotiables.** Accessibility is never traded for taste.
-2. **The project description,** where it is explicit.
-3. **Project references.** The reading of the references in `taste/`.
-4. **The taste model and archetype defaults.** Principles, anti-patterns, presets and fallbacks.
+2. **Constraints.** The hard requirements in the recipe.
+3. **The project description,** where it is explicit.
+4. **The direction,** once the user has confirmed it: the idea and the art direction in `direction.md`.
+5. **Project references.** The reading of the references in `taste/`.
+6. **The taste model and archetype defaults.** Principles, anti-patterns, presets and fallbacks.
 
 Brand assets are not part of this order. They come from the brand.
 
