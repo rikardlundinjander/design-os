@@ -2,10 +2,8 @@
 
 Everything specific to this project lives here. The rest of the repository is the system, and stays unchanged.
 
-- `genome.md`: the genome of the product, written by the AI and adjusted by you
-- `direction.md`: the idea and the art direction
-- `brand/`: brand material, in any form
-- `references/`: references, in any form, with notes on what to take from them
-- `explorations/`: tracks, when the direction is explored
+- `genome.md`: the product's genome, written by the AI and approved by you
+- `input/`: whatever you bring, in any form: brand material, references, screenshots, notes
+- `tracks/`: alternative directions, when the AI explores them
 
 Keep screenshots of other people's work out of public repositories.
