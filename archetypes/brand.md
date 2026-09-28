@@ -6,7 +6,7 @@ status: draft
 
 # Brand
 
-Layer 6 of the archetype system. The brand layer supplies **the specific assets and voice** of a product: typefaces, colors, logo, imagery, icons, tone, signature motion and other distinctive elements.
+Layer 6 of the genome. The brand layer supplies **the specific assets and voice** of a product: typefaces, colors, logo, imagery, icons, tone, signature motion and other distinctive elements.
 
 Brand is different from the other layers. It is not chosen from a list of archetypes, and it does not arrive in a fixed format. One project starts from a logo and a single color. Another starts from full brand guidelines, a design system in a component library and an existing website. This file describes how to **interpret whatever brand input exists** and connect it to the other layers.
 
@@ -80,7 +80,7 @@ Work through the input in four steps.
 
 A component library or design system carries more than brand. It often already contains decisions that belong to other layers: a type scale, spacing, radius, component behavior and motion.
 
-- **Treat it as a constraint, not as brand only.** Identify which visual language and traits it corresponds to most closely, and record that in the recipe.
+- **Treat it as a constraint, not as brand only.** Identify which visual language and traits it corresponds to most closely, and record that in the genome.
 - **Decide whether to follow or evolve it.** Following means the existing system wins where it conflicts with the archetypes. Evolving means the archetypes guide changes. The project description usually says which; if not, ask.
 - **Reuse before creating.** Use existing components and tokens where they fit, and only add what is missing.
 

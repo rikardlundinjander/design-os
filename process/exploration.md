@@ -6,20 +6,20 @@ status: draft
 
 # Exploration
 
-Exploration turns one recipe into **several directions that can be compared and chosen between**. Each direction is a track: a thesis about what the product could be, a set of differences from the recipe, and a few built views that show it.
+Exploration turns one genome into **several directions that can be compared and chosen between**. Each direction is a track: a thesis about what the product could be, a set of differences from the genome, and a few built views that show it.
 
-The recipe says what the product is and which character it should have. Exploration shows that the same intention can be expressed in more than one way, before the product commits to one of them.
+The genome says what the product is and which character it should have. Exploration shows that the same intention can be expressed in more than one way, before the product commits to one of them.
 
 ---
 
 ## When to explore
 
-- **After the first recipe, before building the product.** The recipe gives the tracks a shared base; exploration tests its open choices.
+- **After the first genome, before building the product.** The genome gives the tracks a shared base; exploration tests its open choices.
 - **Before a workshop or review with a client,** when the direction should be chosen together.
 - **When a direction has stalled,** and iterating on it no longer improves it.
 - **For one surface,** such as onboarding or a marketing page, when that surface needs its own direction within an existing product.
 
-Do not explore without a recipe. Without a shared base, the tracks differ in everything and cannot be compared.
+Do not explore without a genome. Without a shared base, the tracks differ in everything and cannot be compared.
 
 ---
 
@@ -47,9 +47,9 @@ Three tracks is the default. Each has a role.
 
 | Track | Role | Thesis |
 |---|---|---|
-| **A: Closest** | The strongest version of the recipe as written | "This is what the recipe asks for, done well." |
-| **B: Stretch** | Pushes the recipe further in a direction it already points | "What if we go further on what makes this product specific?" |
-| **C: Challenge** | Questions one choice in the recipe or the idea itself, and records it as a deliberate tension | "What if the recipe is wrong about this one thing?" |
+| **A: Closest** | The strongest version of the genome as written | "This is what the genome asks for, done well." |
+| **B: Stretch** | Pushes the genome further in a direction it already points | "What if we go further on what makes this product specific?" |
+| **C: Challenge** | Questions one choice in the genome or the idea itself, and records it as a deliberate tension | "What if the genome is wrong about this one thing?" |
 
 The challenge track is a serious proposal, not a contrast to make the others look good. If it would never be chosen, it is not a challenge; replace its thesis.
 
@@ -89,7 +89,7 @@ Each track has a short file at `explorations/<letter>-<name>/track.md` in the pr
 **Idea:** <the idea, if it differs from direction.md>
 **Status:** open | chosen | parked
 
-## Differs from the recipe
+## Differs from the genome
 
 ```text
 Visual:     Editorial (was Neutral)
@@ -117,7 +117,7 @@ Traits:     strong contrast (fully, was clearly), composed (clearly, was uniform
 <Written after building, following the critique in archetypes/taste.md.>
 ````
 
-List only what differs from the recipe. Everything not listed is the recipe.
+List only what differs from the genome. Everything not listed is the genome.
 
 ---
 
@@ -162,13 +162,13 @@ A choice can take three forms:
 
 - **One track.** It becomes the direction.
 - **One track, with qualities from another.** For example B, with the navigation from C. Record exactly what is borrowed and from where.
-- **None.** Write down what the tracks taught, adjust the recipe, and explore again with new theses.
+- **None.** Write down what the tracks taught, adjust the genome, and explore again with new theses.
 
 ---
 
 ## After the choice
 
-1. **Update the recipe and the direction.** Apply the chosen track's differences, and any borrowed qualities, to `recipe.md` and `direction.md`.
+1. **Update the genome and the direction.** Apply the chosen track's differences, and any borrowed qualities, to `genome.md` and `direction.md`.
 2. **Log the decision.** Add a line to the decision log: which track was chosen, over which, and why.
 3. **Park the others.** Set their status to parked. Keep the files and the previews; they are the history of the direction and can be borrowed from later.
 4. **Keep the reactions.** What the client or the team reacted to, for or against, is a strong reference. Add notes to `taste/`, so the next reading of the references includes them.

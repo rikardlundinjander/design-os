@@ -6,9 +6,9 @@ status: draft
 
 # Direction
 
-The recipe defines the design space: what kind of product this is and what character it should have. It does not give the product an idea. Without one, the gaps are filled with generic patterns, and the result is correct but visually weak.
+The genome defines the design space: what kind of product this is and what character it should have. It does not give the product an idea. Without one, the gaps are filled with generic patterns, and the result is correct but visually weak.
 
-Direction adds two things, written to `direction.md` beside the recipe:
+Direction adds two things, written to `direction.md` beside the genome:
 
 - **Creative direction:** the central idea the whole experience revolves around.
 - **Art direction:** how that idea looks and behaves, as concrete rules.
@@ -23,8 +23,8 @@ The simplest distinction:
 
 | Source | Contributes | Example |
 |---|---|---|
-| Recipe | The design space: product type, experience model, languages, traits | Content + Narrative, Editorial, spacious |
-| Constraints | What must be true, in the recipe | Must include pricing, no WebGL |
+| Genome | The design space: product type, experience model, languages, traits | Content + Narrative, Editorial, spacious |
+| Constraints | What must be true, in the genome | Must include pricing, no WebGL |
 | **Creative direction** | **The idea** | "The feeling of tennis, decoded by technology" |
 | **Art direction** | **The rules that make the idea visible** | Close crops of real play; data as a thin layer over movement |
 | Project references | Evidence for the art direction, and its signatures | The reading of the references in `taste/` |
@@ -113,7 +113,7 @@ Write the areas that matter for the product. Most products need the first five.
 
 - **Concrete, not atmospheric.** "Close crops of real play: ball impact, court texture, body tension", not "authentic imagery".
 - **Tied to the idea.** "A serve can turn into its trajectory" follows from "decoded by technology". A rule that does not follow from the idea, the references or the brand needs a reason.
-- **Within the design space.** Art direction works inside the recipe and the constraints. If the direction needs a different visual language or trait, change the recipe and log it.
+- **Within the design space.** Art direction works inside the genome and the constraints. If the direction needs a different visual language or trait, change the genome and log it.
 - **Few and strong.** Five to ten rules per area at most. A long list means the idea is not doing its job.
 - **Signatures come from both sides.** Some come from the reading of the references, some from the idea itself. Name where each comes from.
 
@@ -121,7 +121,7 @@ Write the areas that matter for the product. Most products need the first five.
 
 ## The direction file
 
-Write `direction.md` at the project root, next to `recipe.md`.
+Write `direction.md` at the project root, next to `genome.md`.
 
 ````markdown
 # Direction
@@ -164,7 +164,7 @@ Sources are short: `idea`, `references: <files>`, `brand`, or the visual languag
 
 - **Before building a view,** state in one line how the idea shows in it, and which rules and signatures it applies.
 - **While building,** when two options are both correct, choose the one that expresses the idea better.
-- **In critique,** check the direction first after recipe fit: does the result express the idea, and does it follow the art direction? A result that follows every rule but does not express the idea has not found the direction.
+- **In critique,** check the direction first after genome fit: does the result express the idea, and does it follow the art direction? A result that follows every rule but does not express the idea has not found the direction.
 - **When iterating,** change the art direction when a rule proves wrong, and keep the idea unless the user decides otherwise. A change of idea is a change of direction; log it.
 
 In exploration, tracks may differ in idea. That is the largest difference two tracks can have, and often the most useful one (see `exploration.md`).

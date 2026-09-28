@@ -6,7 +6,7 @@ status: draft
 
 # Product types
 
-Layer 1 of the archetype system. A product type describes **what the product is**: its core job, its objects, its views, its flows and the states it must handle. It says nothing about how the product looks, moves or sounds. Those decisions belong to other layers.
+Layer 1 of the genome. A product type describes **what the product is**: its core job, its objects, its views, its flows and the states it must handle. It says nothing about how the product looks, moves or sounds. Those decisions belong to other layers.
 
 Use this file at the start of a project, before any visual work, to establish the structural needs of the product.
 

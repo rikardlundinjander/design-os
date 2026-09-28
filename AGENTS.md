@@ -1,6 +1,6 @@
 # Instructions for AI agents
 
-This file tells AI agents how to use Design OS. It applies to any tool or model working in this repository or in a project started from it. If your tool expects a different file name for instructions, point it to this file.
+This file tells AI agents how to use Genome. It applies to any tool or model working in this repository or in a project started from it. If your tool expects a different file name for instructions, point it to this file.
 
 ---
 
@@ -9,10 +9,10 @@ This file tells AI agents how to use Design OS. It applies to any tool or model 
 1. The user clones or copies this repository.
 2. The user adds any brand material they have to the `brand/` folder. This can be anything: a logo, a screenshot of a palette, guidelines, font files, or nothing at all. Optionally, they add references to the `taste/` folder: a direction chosen with a client, their own references, screenshots, UI elements, or examples of what to avoid.
 3. The user describes in written text what they want to build. The description may also contain links, such as a component library, an existing website or a design file.
-4. **You** turn the description, the brand material and any references into a recipe and a direction, and write them to `recipe.md` and `direction.md` at the project root.
-5. The user reviews and adjusts the recipe and the direction.
+4. **You** turn the description, the brand material and any references into a genome and a direction, and write them to `genome.md` and `direction.md` at the project root.
+5. The user reviews and adjusts the genome and the direction.
 6. If the direction is still open, or the user asks for alternatives, you explore it in tracks, following `process/exploration.md`, and the user chooses.
-7. Only then do you build from the recipe.
+7. Only then do you build from the genome.
 
 The user does not fill in templates. Your job is to interpret free-form input and make the choices explicit.
 
@@ -20,7 +20,7 @@ The user does not fill in templates. Your job is to interpret free-form input an
 
 ## What this repository contains
 
-Design OS describes digital products as combinations of six independent layers:
+Genome describes digital products as combinations of six independent layers:
 
 | # | Layer | File | Kind |
 |---|---|---|---|
@@ -33,7 +33,7 @@ Design OS describes digital products as combinations of six independent layers:
 
 The taste model in `archetypes/taste.md` is not a layer. It is the quality bar that applies to every project: principles of good design, signal and noise, anti-patterns and critique. It also describes how to read the references in `taste/`. It never changes structure or brand.
 
-The `process/` folder describes how work moves from recipe to product:
+The `process/` folder describes how work moves from genome to product:
 
 | Process | File | Use when |
 |---|---|---|
@@ -42,14 +42,14 @@ The `process/` folder describes how work moves from recipe to product:
 
 ---
 
-## Creating the recipe
+## Creating the genome
 
 ### 1. Read the input
 
 - The written project description, including every hard requirement in it: these become the constraints
 - Everything in `brand/`, and every link mentioned in the description
 - Everything in `taste/`, if the folder has content
-- An existing `recipe.md`, if the project already has one; update it rather than starting over
+- An existing `genome.md`, if the project already has one; update it rather than starting over
 
 ### 2. Choose each layer, in order
 
@@ -72,28 +72,28 @@ Follow the four steps in `archetypes/brand.md`: inventory, extract, fill gaps, c
 
 ### 5. Read the references
 
-If `taste/` has content, analyze it with the method in `archetypes/taste.md`: read each reference, then the set, and summarize it as a reading with two to four signatures. The reading sets the languages and the traits, and it is the main evidence for the art direction. Only an explicit statement in the description overrides it. Present the reading with the recipe so the user can correct it. Skip this step when there are no references.
+If `taste/` has content, analyze it with the method in `archetypes/taste.md`: read each reference, then the set, and summarize it as a reading with two to four signatures. The reading sets the languages and the traits, and it is the main evidence for the art direction. Only an explicit statement in the description overrides it. Present the reading with the genome so the user can correct it. Skip this step when there are no references.
 
 ### 6. Write the direction
 
-Follow `process/direction.md`. Find the idea: write three or four candidates from the brief, test them, and keep one; the others are material for exploration. Then write the art direction: concrete rules per area, each with its source, and the signatures. The art direction owns the expression of the product, within the recipe and the constraints. Brand owns the assets.
+Follow `process/direction.md`. Find the idea: write three or four candidates from the brief, test them, and keep one; the others are material for exploration. Then write the art direction: concrete rules per area, each with its source, and the signatures. The art direction owns the expression of the product, within the genome and the constraints. Brand owns the assets.
 
 ### 7. Ask only what changes the choices
 
-Do not ask the user to answer every kickoff question. Ask only when the answer would change a choice in the recipe, and ask all such questions at once. Everything else becomes an assumption, stated in the recipe.
+Do not ask the user to answer every kickoff question. Ask only when the answer would change a choice in the genome, and ask all such questions at once. Everything else becomes an assumption, stated in the genome.
 
-### 8. Write the recipe and the direction
+### 8. Write the genome and the direction
 
-Write `recipe.md` using the format below, and `direction.md` using the format in `process/direction.md`. Present both to the user for review.
+Write `genome.md` using the format below, and `direction.md` using the format in `process/direction.md`. Present both to the user for review.
 
 ---
 
-## Recipe format
+## Genome format
 
 ````markdown
 # <Project name>
 
-## Recipe
+## Genome
 
 ```text
 Product:    <primary> + <secondary>
@@ -150,7 +150,7 @@ For each layer: the choice, the scope of any supporting choice, why, and how the
 
 ## Open questions
 
-<Questions whose answers could change the recipe.>
+<Questions whose answers could change the genome.>
 
 ## Decision log
 
@@ -158,7 +158,7 @@ For each layer: the choice, the scope of any supporting choice, why, and how the
 |---|---|---|---|
 ````
 
-Keep the recipe short. It is a starting point, not a specification.
+Keep the genome short. It is a starting point, not a specification.
 
 ---
 
@@ -172,7 +172,7 @@ Do not load every file in full for every task. For each layer, read the shared s
 | Experience model | What this layer owns | Navigation, selection and feedback, implications for other layers, anti-patterns |
 | Visual language | What this layer owns, Non-negotiables, The generic default | Principles, Avoid, Tendencies |
 | Motion language | What this layer owns, Non-negotiables, The generic default, Vocabulary, Timing grows in the product | Role and character, Principles, Avoid, Reduced motion, the column in the Moments table |
-| Traits | Writing traits in the genome, Tuning by prompt, From traits to values | The descriptions and guardrails for every trait the recipe names, the words table, and the language character table |
+| Traits | Writing traits in the genome, Tuning by prompt, From traits to values | The descriptions and guardrails for every trait the genome names, the words table, and the language character table |
 | Brand | The whole file | Not applicable |
 | Taste | Principles of good design, Signal and noise, Anti-patterns, Critique | Analyzing references and References in a project, when `taste/` has content |
 
@@ -184,7 +184,7 @@ For secondary or supporting choices, read the same sections and apply them only 
 
 ### Respect constraints
 
-The constraints in the recipe are mandatory. Never interpret them creatively, and never trade them for a design choice. Only the non-negotiables rank above them.
+The constraints in the genome are mandatory. Never interpret them creatively, and never trade them for a design choice. Only the non-negotiables rank above them.
 
 ### Respect layer ownership
 
@@ -216,15 +216,15 @@ The avoid lists and anti-patterns in each chosen archetype are hard constraints,
 
 ### Apply the taste model
 
-The principles, the signal and noise tests and the anti-patterns in `archetypes/taste.md` apply to every project. Anti-patterns are judgments rather than bans: one is allowed only when the recipe states why it is used. Where a chosen visual language deliberately does something the taste model warns against, the language wins inside its own character.
+The principles, the signal and noise tests and the anti-patterns in `archetypes/taste.md` apply to every project. Anti-patterns are judgments rather than bans: one is allowed only when the genome states why it is used. Where a chosen visual language deliberately does something the taste model warns against, the language wins inside its own character.
 
 ### Check against the generic default
 
-`visual-languages.md` and `motion-languages.md` each describe a generic default look and motion. If your output shows it, and the recipe did not ask for it, revise the output before delivering.
+`visual-languages.md` and `motion-languages.md` each describe a generic default look and motion. If your output shows it, and the genome did not ask for it, revise the output before delivering.
 
 ### Never break the non-negotiables
 
-The non-negotiables in the visual and motion layers override every archetype, trait and brand rule. This includes contrast, visible focus, not relying on color alone, legible text sizes, touch target sizes and reduced motion. If the recipe or the brand input would break one, follow the non-negotiable and tell the user.
+The non-negotiables in the visual and motion layers override every archetype, trait and brand rule. This includes contrast, visible focus, not relying on color alone, legible text sizes, touch target sizes and reduced motion. If the genome or the brand input would break one, follow the non-negotiable and tell the user.
 
 ### Keep scopes
 
@@ -240,16 +240,16 @@ Use only archetypes and traits that exist in the repository. If a project seems 
 
 When the user asks for directions, alternatives, options or an exploration, or before a workshop where the direction will be chosen, follow `process/exploration.md`:
 
-- Explore from a recipe, never without one.
+- Explore from a genome, never without one.
 - Keep product type, experience model, content, brand assets, non-negotiables and the taste model locked, unless the user asks to explore structure. Product type is always locked.
 - Build three tracks by default, Closest, Stretch and Challenge, with a thesis each, and check that every pair differs enough.
 - Build the same one to three key views with the same real content in every track, to the same level of finish.
 - Critique every track, compare them in one table, and give an opinion labeled as such. Never choose on the user's behalf.
-- After the choice, update the recipe, log the decision and park the other tracks.
+- After the choice, update the genome, log the decision and park the other tracks.
 
 ---
 
-## Building from the recipe
+## Building from the genome
 
 1. Start from the product type: which objects, states and flows does this view need?
 2. Apply the experience model: what is the center of gravity, how does navigation work, what must motion communicate?
@@ -263,13 +263,13 @@ When the user asks for directions, alternatives, options or an exploration, or b
 
 When generating tokens, structure them in three levels: primitives from the brand, semantic roles from the visual language and traits, and component values from all layers combined. Report every value clamped by the accessibility floor.
 
-When the user changes direction during the project, update `recipe.md` and add a line to the decision log.
+When the user changes direction during the project, update `genome.md` and add a line to the decision log.
 
 ---
 
 ## Reviewing work
 
-When asked to review work, run the critique in `archetypes/taste.md`. It starts with recipe fit: report findings by layer, and for each layer state what matches, what deviates, and whether each deviation looks deliberate or accidental. Then judge the result against the principles, the signal and noise tests, the anti-patterns and the non-negotiables, and lead with the single most important problem.
+When asked to review work, run the critique in `archetypes/taste.md`. It starts with genome fit: report findings by layer, and for each layer state what matches, what deviates, and whether each deviation looks deliberate or accidental. Then judge the result against the principles, the signal and noise tests, the anti-patterns and the non-negotiables, and lead with the single most important problem.
 
 ---
 
@@ -286,7 +286,7 @@ Do not change the archetype files as a side effect of project work. When project
 
 ## Self-check before delivering
 
-- [ ] The work follows the recipe, or deviations are stated
+- [ ] The work follows the genome, or deviations are stated
 - [ ] No layer made a decision owned by another layer
 - [ ] Values follow the language character and the traits, and read as intended in the product
 - [ ] Nothing in the chosen avoid lists appears in the output

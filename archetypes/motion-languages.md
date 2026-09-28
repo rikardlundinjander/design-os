@@ -6,7 +6,7 @@ status: draft
 
 # Motion languages
 
-Layer 4 of the archetype system. A motion language describes **the role and character of motion**: what motion is used for, how it feels, and where it is deliberately absent.
+Layer 4 of the genome. A motion language describes **the role and character of motion**: what motion is used for, how it feels, and where it is deliberately absent.
 
 Motion is not decoration. It explains what happened, where things went, what caused what and what matters now. A motion language decides how much of that explanation is carried by movement, and with what character.
 
@@ -34,7 +34,7 @@ The experience model hands over requirements. The motion language fulfills them.
 1. **Pick one motion language.** Unlike other layers, motion rarely benefits from a secondary language. If needed, scope it tightly, for example "Cinematic on the landing experience only".
 2. **List the motion requirements from the experience model.** Each dominant and supporting model states what motion must communicate.
 3. **Use the moments table** to see how the chosen language handles common moments.
-4. **Write the role and character into the recipe,** not values. Durations and curves are found in the product.
+4. **Write the role and character into the genome,** not values. Durations and curves are found in the product.
 5. **Define reduced motion behavior** before anything else is animated.
 
 If you cannot decide, answer this: *when the user does something, should they feel the product respond, or just see the result?* Feeling points toward Responsive, Physical or Expressive. Seeing points toward Still or Quiet.
@@ -470,7 +470,7 @@ The motion language describes what motion is for and how it should feel. The spe
 
 1. **Start from the character.** Build the first version from the language's tempo, easing and choreography, and from the moments table.
 2. **Judge it in use.** Motion can only be evaluated in the running product: repeated, interrupted, on real content and on slower devices.
-3. **Record what settles.** When a duration or a curve holds up across several moments, record it in the project, as part of its design system or in the recipe. Those values belong to the product, not to the archetype.
+3. **Record what settles.** When a duration or a curve holds up across several moments, record it in the project, as part of its design system or in the genome. Those values belong to the product, not to the archetype.
 4. **Keep the words as the test.** A settled value is right when the motion still reads as the language describes it. If it does not, change the value, not the language.
 
 ---

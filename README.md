@@ -1,6 +1,8 @@
-# Design OS
+# Genome
 
-A shared starting point for designing digital products. Design OS describes products as combinations of a small number of independent layers, so that every project starts from considered decisions instead of a blank file or a template.
+A design genome for AI-led product work: a shared starting point for designing digital products. Genome describes products as combinations of a small number of independent layers, so that every project starts from considered decisions instead of a blank file or a template.
+
+Every product has a genome: a short file, `genome.md`, that records which archetypes it combines, how its traits lean and what idea it is built around. The name carries through the rest of the system. Traits are the qualities a genome expresses. Exploration grows several variations from one genome, taste selects between them, and later changes are mutations of a chosen version, so the lineage of a direction can be traced.
 
 It is platform-agnostic and written for both people and AI. Every file describes principles, structure and behavior in plain language, so that designers, developers and AI tools can read the same definition and arrive at the same product.
 
@@ -8,7 +10,7 @@ It is platform-agnostic and written for both people and AI. Every file describes
 
 ## The idea
 
-Most products are not unique in their structure. They are unique in how a few decisions are combined. Design OS separates those decisions into layers:
+Most products are not unique in their structure. They are unique in how a few decisions are combined. Genome separates those decisions into layers:
 
 ```text
 Product type          what the product is
@@ -41,7 +43,7 @@ Layers 1 to 4 are archetypes: a defined set of options to choose from. Layer 5 i
 
 **Taste**, described in [taste.md](archetypes/taste.md), is the quality bar of the system rather than a layer. It holds general principles of good design, the difference between signal and noise, anti-patterns and a method for critique, and it applies to every project. It also describes how to read references. When a project brings references, such as a direction chosen with a client, they decide how the product is expressed, and the brand decides what it is expressed with.
 
-**Direction**, described in [direction.md](process/direction.md), gives each project what the layers cannot: an idea. The recipe defines the design space; the creative direction is the one-sentence idea the experience revolves around, and the art direction turns it into concrete rules for typography, composition, imagery, color and motion. Without an idea, the result tends to be correct but generic.
+**Direction**, described in [direction.md](process/direction.md), gives each project what the layers cannot: an idea. The genome defines the design space; the creative direction is the one-sentence idea the experience revolves around, and the art direction turns it into concrete rules for typography, composition, imagery, color and motion. Without an idea, the result tends to be correct but generic.
 
 ---
 
@@ -51,12 +53,12 @@ Layers 1 to 4 are archetypes: a defined set of options to choose from. Layer 5 i
 2. **Add brand material, if you have any,** to the `brand/` folder. It can be anything: a logo, a screenshot of a color palette, brand guidelines, font files. Links, such as a component library or an existing website, can go in the description instead. No template to fill in.
 3. **Add references, if you have any,** to the `taste/` folder: a direction chosen with a client, screenshots, UI elements, examples of what to avoid, and notes on what to take from them. Keep screenshots of other people's work out of public repositories.
 4. **Describe in plain text what you want to build.** Who it is for, what it should do, what it should feel like, and any constraints.
-5. **Let the AI write a recipe and a direction.** Following [`AGENTS.md`](AGENTS.md), it chooses from each layer, describes the traits, interprets the brand material, reads any references, finds the idea and writes the art direction. The result goes to `recipe.md` and `direction.md`. It asks only questions whose answers would change a choice.
-6. **Review and adjust the recipe and the direction.**
-7. **Explore, if the direction is open.** The AI builds a few tracks from the recipe, following [exploration.md](process/exploration.md): the closest version, one that stretches it and one that challenges it, each with the same key views. You choose, and the recipe is updated.
-8. **Build from the recipe.**
+5. **Let the AI write a genome and a direction.** Following [`AGENTS.md`](AGENTS.md), it chooses from each layer, describes the traits, interprets the brand material, reads any references, finds the idea and writes the art direction. The result goes to `genome.md` and `direction.md`. It asks only questions whose answers would change a choice.
+6. **Review and adjust the genome and the direction.**
+7. **Explore, if the direction is open.** The AI builds a few tracks from the genome, following [exploration.md](process/exploration.md): the closest version, one that stretches it and one that challenges it, each with the same key views. You choose, and the genome is updated.
+8. **Build from the genome.**
 
-A recipe looks like this at its core, followed by the reasons for each choice, the interpreted brand, assumptions and open questions:
+A genome looks like this at its core, followed by the reasons for each choice, the interpreted brand, assumptions and open questions:
 
 ```text
 Product:    Service (primary) + Content
@@ -69,7 +71,7 @@ Taste:      none
 Idea:       Official matters, as calm as a well-kept archive
 ```
 
-A recipe is a starting point, not a specification. It gives the project something concrete enough to react to, and open enough to become unique.
+A genome is a starting point, not a specification. It gives the project something concrete enough to react to, and open enough to become unique.
 
 ---
 
@@ -103,7 +105,7 @@ Values are then judged in the product, where they can be seen.
 design-os/
 ├── README.md                 this file
 ├── AGENTS.md                 instructions for AI agents
-├── process/                  how work moves from recipe to product
+├── process/                  how work moves from genome to product
 │   ├── direction.md
 │   └── exploration.md
 ├── archetypes/               the six layers and the taste model
@@ -122,17 +124,17 @@ Planned: implementation examples per archetype, such as tokens and reference vie
 
 ---
 
-## Using Design OS in a project
+## Using Genome in a project
 
-Keep the archetype files unchanged in the project. Project-specific material lives beside them: brand material in `brand/`, references in `taste/`, and the recipe and the direction in `recipe.md` and `direction.md` at the project root, written by the AI and adjusted by you.
+Keep the archetype files unchanged in the project. Project-specific material lives beside them: brand material in `brand/`, references in `taste/`, and the genome and the direction in `genome.md` and `direction.md` at the project root, written by the AI and adjusted by you.
 
-Most AI tools read [`AGENTS.md`](AGENTS.md) automatically. It describes how to turn a written description into a recipe, which sections of each layer to read, how values are decided and how to check the work before delivering it.
+Most AI tools read [`AGENTS.md`](AGENTS.md) automatically. It describes how to turn a written description into a genome, which sections of each layer to read, how values are decided and how to check the work before delivering it.
 
 ---
 
 ## Contributing
 
-Design OS improves through use. When a project shows that an archetype, a trait or a word is wrong, update the file.
+Genome improves through use. When a project shows that an archetype, a trait or a word is wrong, update the file.
 
 - **Keep the schema.** Every archetype within a layer uses the same sections, so they stay comparable.
 - **Stay platform-agnostic.** Describe principles, structure and behavior, not frameworks, libraries or tools.

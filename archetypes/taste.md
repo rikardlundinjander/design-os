@@ -83,7 +83,7 @@ Noise is relative to the visual language. Atmosphere is signal in Cinematic, orn
 
 ## Anti-patterns
 
-Patterns that make design worse in most contexts. They are judgments, not universal bans: a pattern is allowed when the recipe states why it is used. Without a stated reason, remove it.
+Patterns that make design worse in most contexts. They are judgments, not universal bans: a pattern is allowed when the genome states why it is used. Without a stated reason, remove it.
 
 The generic default in `visual-languages.md` and `motion-languages.md` describes the look these patterns add up to. Check both.
 
@@ -138,11 +138,11 @@ Critique is how the taste model is applied to a result. Run it on every version 
 
 **Order:**
 
-1. **Recipe fit.** Does the result follow the constraints, the chosen layers, traits and brand? Report deviations by layer, and whether each looks deliberate.
+1. **Genome fit.** Does the result follow the constraints, the chosen layers, traits and brand? Report deviations by layer, and whether each looks deliberate.
 2. **Direction.** Does the result express the idea, and follow the art direction? A result that follows every rule but does not express the idea has not found the direction.
 3. **Principles.** Go through the principles of good design. Name the ones that are not met.
 4. **Signal and noise.** Run the tests. List what can be removed.
-5. **Anti-patterns.** List every anti-pattern present that the recipe or the direction does not justify.
+5. **Anti-patterns.** List every anti-pattern present that the genome or the direction does not justify.
 6. **Specificity.** Name what makes this result specific. If nothing does, say so: the result is correct but generic. When the project has references, name the signatures the result translates; if none can be seen, the direction has not come through.
 
 **Dimensions to judge:** hierarchy, composition, typography, rhythm, density, restraint, specificity and coherence.
@@ -155,7 +155,7 @@ Critique is how the taste model is applied to a result. Run it on every version 
 - Phrase changes as direction: what to keep, what to strengthen, what to reduce.
 - Do not praise by default. A critique with no problems needs a reason.
 
-The designer decides what to change. When a critique leads to a change, record the learning in the recipe's decision log, so the next version starts from it.
+The designer decides what to change. When a critique leads to a change, record the learning in the genome's decision log, so the next version starts from it.
 
 ---
 
@@ -243,16 +243,16 @@ When the brand comes with rules about expression, such as layout rules in guidel
 
 | From the reading | Applied as |
 |---|---|
-| Closest visual and motion language | The languages of the recipe, unless the description names others |
+| Closest visual and motion language | The languages of the genome, unless the description names others |
 | Traits | The traits of the genome. The language character applies only to traits the reading says nothing about |
 | Signatures | The signatures of the art direction, translated into every key view (see below) |
 | Invariants | Rules in the art direction, checked in critique |
 | Absences and "not this" examples | Added to the avoid lists for the project, once confirmed |
 | References per language | Anchors for the traits and calibration while building |
 
-**Natural ranges do not stop the references.** If the references are denser, softer or more saturated than the chosen language usually is, follow the references and record the tension in the recipe. Those tensions are often where the product's own expression is.
+**Natural ranges do not stop the references.** If the references are denser, softer or more saturated than the chosen language usually is, follow the references and record the tension in the genome. Those tensions are often where the product's own expression is.
 
-**Anti-patterns can be part of a direction.** If a pattern from the anti-patterns is an invariant or a signature of the reference set, it may be used. Record it in the recipe with the references it comes from. A pattern that appears in only one reference does not qualify.
+**Anti-patterns can be part of a direction.** If a pattern from the anti-patterns is an invariant or a signature of the reference set, it may be used. Record it in the genome with the references it comes from. A pattern that appears in only one reference does not qualify.
 
 ### Translating signatures
 
@@ -268,7 +268,7 @@ Signatures are what make a direction recognizable. The reading names **two to fo
 When sources disagree about expression, earlier wins:
 
 1. **Non-negotiables.** Accessibility is never traded for taste.
-2. **Constraints.** The hard requirements in the recipe.
+2. **Constraints.** The hard requirements in the genome.
 3. **The project description,** where it is explicit.
 4. **The direction,** once the user has confirmed it: the idea and the art direction in `direction.md`.
 5. **Project references.** The reading of the references in `taste/`.
