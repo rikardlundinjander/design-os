@@ -23,7 +23,7 @@ The simplest distinction:
 
 | Source | Contributes | Example |
 |---|---|---|
-| Recipe | The design space: product type, experience model, languages, dials | Content + Narrative, Editorial, density 30 |
+| Recipe | The design space: product type, experience model, languages, traits | Content + Narrative, Editorial, spacious |
 | Constraints | What must be true, in the recipe | Must include pricing, no WebGL |
 | **Creative direction** | **The idea** | "The feeling of tennis, decoded by technology" |
 | **Art direction** | **The rules that make the idea visible** | Close crops of real play; data as a thin layer over movement |
@@ -33,7 +33,7 @@ The simplest distinction:
 
 The visual language gives the generic character: Editorial says type and space carry the hierarchy. The art direction makes it specific to this product: which type, at what scale, against which images, for which reason.
 
-**Art direction owns the expression.** References, the visual language and the dials inform it; the brand supplies what it works with. Once the user has confirmed the direction, it wins over the reading of the references and the archetype defaults.
+**Art direction owns the expression.** References, the visual language and the traits inform it; the brand supplies what it works with. Once the user has confirmed the direction, it wins over the reading of the references and the archetype defaults.
 
 ---
 
@@ -113,7 +113,7 @@ Write the areas that matter for the product. Most products need the first five.
 
 - **Concrete, not atmospheric.** "Close crops of real play: ball impact, court texture, body tension", not "authentic imagery".
 - **Tied to the idea.** "A serve can turn into its trajectory" follows from "decoded by technology". A rule that does not follow from the idea, the references or the brand needs a reason.
-- **Within the design space.** Art direction works inside the recipe and the constraints. If the direction needs a different visual language or dial, change the recipe and log it.
+- **Within the design space.** Art direction works inside the recipe and the constraints. If the direction needs a different visual language or trait, change the recipe and log it.
 - **Few and strong.** Five to ten rules per area at most. A long list means the idea is not doing its job.
 - **Signatures come from both sides.** Some come from the reading of the references, some from the idea itself. Name where each comes from.
 

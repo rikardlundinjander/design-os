@@ -22,7 +22,7 @@ The taste model applies to every project. It holds general principles, not a hou
 | Experience model | How the user engages | Nothing. Behavior follows the user. |
 | Visual language | Character of form | How well that character is carried out |
 | Motion language | Role and character of motion | Whether motion earns its place |
-| Dials | Direction of each quality | Anchors for the positions, read from references |
+| Traits | Which way each quality leans | Anchors for the leans, and meanings for words, read from references |
 | Project references | How the product is expressed, when a project has them | The method for reading them |
 | Brand | Which assets are used | Nothing. Brand belongs to the product. |
 
@@ -138,7 +138,7 @@ Critique is how the taste model is applied to a result. Run it on every version 
 
 **Order:**
 
-1. **Recipe fit.** Does the result follow the constraints, the chosen layers, dials and brand? Report deviations by layer, and whether each looks deliberate.
+1. **Recipe fit.** Does the result follow the constraints, the chosen layers, traits and brand? Report deviations by layer, and whether each looks deliberate.
 2. **Direction.** Does the result express the idea, and follow the art direction? A result that follows every rule but does not express the idea has not found the direction.
 3. **Principles.** Go through the principles of good design. Name the ones that are not met.
 4. **Signal and noise.** Run the tests. List what can be removed.
@@ -179,7 +179,7 @@ For each reference, record observations, not adjectives. Every statement should 
 | Signal and noise | What carries meaning, what is decoration, how many elements compete |
 | Motion | If the reference moves: role and character, from `motion-languages.md` |
 | Signature | The one or two details that make it specific rather than generic |
-| Reading | Closest visual and motion language, estimated dial directions, and how confident the reading is |
+| Reading | Closest visual and motion language, estimated traits, and how confident the reading is |
 | Take and leave | What is worth taking from it, and what belongs to its own brand or content and should be left |
 
 ### Reading a set
@@ -203,7 +203,7 @@ Individual readings become useful when they are compared.
 
 ### The result
 
-Summarize a set as a **reading**: five to ten statements, each with the references it rests on and a confidence level, plus the closest visual and motion language, the dial directions and two to four signatures. Present it to the user and let them correct it. Corrections are stronger evidence than the references themselves.
+Summarize a set as a **reading**: five to ten statements, each with the references it rests on and a confidence level, plus the closest visual and motion language, the traits and two to four signatures. Present it to the user and let them correct it. Corrections are stronger evidence than the references themselves.
 
 ---
 
@@ -229,7 +229,7 @@ When a project has references, they are not a tiebreaker. They are the main evid
 | Art direction decides, informed by the references | Brand decides |
 |---|---|
 | Visual and motion language | Typefaces |
-| Dial directions | Colors and color scales |
+| Traits | Colors and color scales |
 | Composition and grid | Logo and distinctive assets |
 | Typographic hierarchy: scale, contrast, rhythm | Imagery sources and icon set |
 | Treatment of imagery: scale, cropping, placement | Tone of voice |
@@ -244,11 +244,11 @@ When the brand comes with rules about expression, such as layout rules in guidel
 | From the reading | Applied as |
 |---|---|
 | Closest visual and motion language | The languages of the recipe, unless the description names others |
-| Dial directions | The starting positions of the dials. Presets apply only to dials the reading says nothing about |
+| Traits | The traits of the genome. The language character applies only to traits the reading says nothing about |
 | Signatures | The signatures of the art direction, translated into every key view (see below) |
 | Invariants | Rules in the art direction, checked in critique |
 | Absences and "not this" examples | Added to the avoid lists for the project, once confirmed |
-| References per language | Anchors for the dials and calibration while building |
+| References per language | Anchors for the traits and calibration while building |
 
 **Natural ranges do not stop the references.** If the references are denser, softer or more saturated than the chosen language usually is, follow the references and record the tension in the recipe. Those tensions are often where the product's own expression is.
 
@@ -272,7 +272,7 @@ When sources disagree about expression, earlier wins:
 3. **The project description,** where it is explicit.
 4. **The direction,** once the user has confirmed it: the idea and the art direction in `direction.md`.
 5. **Project references.** The reading of the references in `taste/`.
-6. **The taste model and archetype defaults.** Principles, anti-patterns, presets and fallbacks.
+6. **The taste model and archetype defaults.** Principles, anti-patterns, language character and fallbacks.
 
 Brand assets are not part of this order. They come from the brand.
 

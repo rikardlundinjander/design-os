@@ -20,11 +20,11 @@ Brand is different from the other layers. It is not chosen from a list of archet
 | Experience model | How the user engages | Nothing. Behavior is brand-independent. |
 | Visual language | Character of form, roles of type and color | Which typefaces and hues play those roles |
 | Motion language | Timing, easing, choreography | A signature curve and signature moments, within the language |
-| Dials | The direction of each quality | Specific assets, where the dial leaves a choice |
+| Traits | Which way each quality leans | Specific assets, where the traits leave a choice |
 
 The principle: **the other layers decide how things are used. Brand decides what is used.**
 
-Editorial says "a strong display face paired with a readable text face". Brand says which two typefaces. The color dial says "one to two accent hues, medium chroma". Brand says which hues.
+Editorial says "a strong display face paired with a readable text face". Brand says which two typefaces. A balanced color trait says "one or two accent hues, medium chroma". Brand says which hues.
 
 ---
 
@@ -61,12 +61,12 @@ Work through the input in four steps.
 |---|---|---|
 | Logo | Logo files, marks in screenshots, the existing product | Logotype set in the chosen typeface, or no logo |
 | Typefaces | Font files, names in guidelines, fonts used in the existing product or library | A neutral family that fits the visual language |
-| Brand colors | Palettes, guidelines, the logo, the existing product, tokens | One accent derived from the logo; neutral scale from the warmth dial |
+| Brand colors | Palettes, guidelines, the logo, the existing product, tokens | One accent derived from the logo; neutral scale from the warmth trait |
 | Color scales | Tokens, component library, guidelines | Scales generated from the extracted colors |
 | Status colors | Tokens, component library | Neutral defaults that meet contrast requirements |
 | Imagery | Example images, guidelines, the existing product | Guided by the visual language; placeholders marked as such |
-| Icons | Icon set in library or product | A set that fits the visual language and softness dial |
-| Tone of voice | Guidelines, existing copy, the project description | Plain, clear language matching the dials |
+| Icons | Icon set in library or product | A set that fits the visual language and the softness trait |
+| Tone of voice | Guidelines, existing copy, the project description | Plain, clear language matching the traits |
 | Signature motion | Motion guidelines, the existing product | None; the motion language alone |
 | Distinctive assets | Patterns, shapes, graphic devices in any source | None |
 
@@ -80,7 +80,7 @@ Work through the input in four steps.
 
 A component library or design system carries more than brand. It often already contains decisions that belong to other layers: a type scale, spacing, radius, component behavior and motion.
 
-- **Treat it as a constraint, not as brand only.** Identify which visual language and dial values it corresponds to most closely, and record that in the recipe.
+- **Treat it as a constraint, not as brand only.** Identify which visual language and traits it corresponds to most closely, and record that in the recipe.
 - **Decide whether to follow or evolve it.** Following means the existing system wins where it conflicts with the archetypes. Evolving means the archetypes guide changes. The project description usually says which; if not, ask.
 - **Reuse before creating.** Use existing components and tokens where they fit, and only add what is missing.
 
@@ -122,7 +122,7 @@ Brand assets and the chosen visual language must fit. Check this as soon as the 
 **Resolving a conflict,** in order of preference:
 
 1. **Scope the brand asset.** Use the conflicting asset only where it fits, for example a decorative typeface for display only, with a neutral text face.
-2. **Adjust the dials.** Move the relevant dial toward the brand, within the language's natural range.
+2. **Adjust the traits.** Lean the relevant trait toward the brand, within what the language allows.
 3. **Choose a different visual language** for the affected surface.
 4. **Record the tension.** If the conflict is deliberate, write down why.
 
@@ -137,7 +137,7 @@ Brand fills in the lowest level of the token system: the raw values. The other l
 | Token level | Filled by | Example |
 |---|---|---|
 | Primitives (raw values) | **Brand** | Font families, brand hue scales, the neutral scale, the icon set |
-| Semantic (roles) | Visual language, dials | Text primary, surface raised, accent interactive, display type |
+| Semantic (roles) | Visual language, traits | Text primary, surface raised, accent interactive, display type |
 | Component | All layers combined | Button background, card radius, heading size |
 
 Every brand color becomes a full scale, from light to dark, before it is used. If the input only provides single swatches, generate the scales and mark them as generated.
@@ -150,7 +150,7 @@ When the same product serves several brands, such as white label, sub-brands or 
 
 - **Fixed across brands:** product type, experience model, visual language, motion language, accessibility floor.
 - **Varies per brand:** everything described in this file.
-- **Optionally varies:** selected dials, typically color, warmth and softness, within agreed ranges.
+- **Optionally varies:** selected traits, typically color, warmth and softness, within agreed limits.
 
 Test every brand against the same set of reference views. If a brand breaks a view, adjust how its input is interpreted or add a scoped rule; do not fork the structure.
 

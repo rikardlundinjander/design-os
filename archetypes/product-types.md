@@ -32,7 +32,7 @@ If you cannot decide on a primary type, answer this: *what does the user do in t
 | Primary and secondary flows | Navigation pattern (see interaction layer) |
 | Required states (empty, loading, error, etc.) | Motion and transitions |
 | Structural needs (search, permissions, history) | Brand expression |
-| What success means for the user | Density and personality |
+| What success means for the user | Traits |
 
 Keep this boundary strict. If a line in a product type starts describing appearance, move it to another layer.
 

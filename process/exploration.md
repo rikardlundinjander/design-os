@@ -32,7 +32,7 @@ By default, exploration varies the **form** of the product and keeps its **struc
 | Constraints | The idea and the art direction |
 | Product type | Visual language |
 | Experience model | Motion language |
-| Content and key tasks | Dials |
+| Content and key tasks | Traits |
 | Brand assets | Brand presence per surface |
 | Non-negotiables | Composition and typographic hierarchy |
 | The taste model | |
@@ -67,7 +67,7 @@ Tracks must offer a real choice. A different **idea** is the largest difference 
 
 - The dominant visual language
 - The motion language
-- Two or more dials, clearly apart
+- Two or more traits leaning clearly apart
 - The principle of composition, for example type-led versus image-led, or one column versus a strict grid
 - Brand presence on the key views
 
@@ -93,7 +93,7 @@ Each track has a short file at `explorations/<letter>-<name>/track.md` in the pr
 
 ```text
 Visual:     Editorial (was Neutral)
-Dials:      contrast 85 (was 60), expressivity 70 (was 30)
+Traits:     strong contrast (fully, was clearly), composed (clearly, was uniform)
 ```
 
 ## Signatures

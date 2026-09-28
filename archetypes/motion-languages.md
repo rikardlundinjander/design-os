@@ -22,7 +22,7 @@ A motion language does not set durations or curves. Specific timing and behavior
 | Experience model | **What** motion must communicate, such as "show where the object went" |
 | Visual language | The character motion must fit, such as restrained or expressive |
 | **Motion language** | **How** it is communicated: the role motion plays and its character |
-| Density and personality | How much motion, via the motion dial |
+| Traits | How much motion, via the motion trait |
 | Brand | Signature moments, such as a logo animation or a characteristic curve |
 
 The experience model hands over requirements. The motion language fulfills them. Two products with the same requirement, "show that the item was saved", can answer it with a quick color change or a choreographed confirmation. Both are correct within their language.
@@ -47,7 +47,7 @@ If you cannot decide, answer this: *when the user does something, should they fe
 |---|---|
 | Role: which purposes motion serves | What must be communicated (experience model) |
 | Character: tempo, easing, distance and choreography, described in words | Visual style of what moves (visual language) |
-| Interruptibility and gesture continuity | Amount of motion overall (motion dial) |
+| Interruptibility and gesture continuity | Amount of motion overall (motion trait) |
 | Reduced motion behavior | Signature brand animations (brand) |
 | Where motion is deliberately absent | Which states exist (product type) |
 | | Specific durations and curves (the product) |
@@ -481,4 +481,4 @@ The motion language describes what motion is for and how it should feel. The spe
 - Describe role and character in words. Do not add durations, curves or other values; they belong to each product.
 - Never refer to a specific animation library or platform API.
 - Every language needs an avoid list and a reduced motion section.
-- Add a new language only when a direction cannot be described as an existing language with a different motion dial or a brand signature.
+- Add a new language only when a direction cannot be described as an existing language with a different motion trait or a brand signature.

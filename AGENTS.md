@@ -28,7 +28,7 @@ Design OS describes digital products as combinations of six independent layers:
 | 2 | Experience model | `archetypes/experience-models.md` | Choose from archetypes |
 | 3 | Visual language | `archetypes/visual-languages.md` | Choose from archetypes |
 | 4 | Motion language | `archetypes/motion-languages.md` | Choose from archetypes |
-| 5 | Density and personality | `archetypes/density-and-personality.md` | Set dials from 0 to 100 |
+| 5 | Traits | `archetypes/traits.md` | Describe in words; adjust by prompting |
 | 6 | Brand | `archetypes/brand.md` | Interpret brand input |
 
 The taste model in `archetypes/taste.md` is not a layer. It is the quality bar that applies to every project: principles of good design, signal and noise, anti-patterns and critique. It also describes how to read the references in `taste/`. It never changes structure or brand.
@@ -53,7 +53,7 @@ The `process/` folder describes how work moves from recipe to product:
 
 ### 2. Choose each layer, in order
 
-Work from structure to style: product type, experience model, visual language, motion language, dials, brand.
+Work from structure to style: product type, experience model, visual language, motion language, traits, brand.
 
 For each layer, read its "How to use this file" section and the sections listed under [Reading the layers](#reading-the-layers). Then:
 
@@ -62,17 +62,17 @@ For each layer, read its "How to use this file" section and the sections listed 
 - Write down why, referring to what the description said.
 - Note where the project differs from the archetype. That is usually where the interesting design work is.
 
-### 3. Set the dials
+### 3. Describe the traits
 
-When the project has references, start from the dial directions in their reading. Use the preset for the chosen visual language only for dials the reading says nothing about, or when there are no references. References may place a dial outside the language's natural range; record the tension. Then move only the dials the description gives an explicit reason to move. Push at least two dials clearly away from the middle, as the dials file requires.
+Traits are words, never numbers. When the project has references, take the traits from their reading. Otherwise start from the language character in `archetypes/traits.md`. Translate the description's words, such as playful or premium, through the words table, and record which reading you chose when a word has several. References may lean a trait past where the language stops being itself; record the tension. Write only the traits that give the product its character, with at least two clear leans.
 
 ### 4. Interpret the brand
 
-Follow the four steps in `archetypes/brand.md`: inventory, extract, fill gaps, confirm. Mark every value that was read from an image, generated or filled in as a fallback. If the brand input includes a design system or an existing product, identify the closest visual language and dial values, and decide with the user whether to follow or evolve it.
+Follow the four steps in `archetypes/brand.md`: inventory, extract, fill gaps, confirm. Mark every value that was read from an image, generated or filled in as a fallback. If the brand input includes a design system or an existing product, identify the closest visual language and traits, and decide with the user whether to follow or evolve it.
 
 ### 5. Read the references
 
-If `taste/` has content, analyze it with the method in `archetypes/taste.md`: read each reference, then the set, and summarize it as a reading with two to four signatures. The reading sets the languages and dial starting positions, and it is the main evidence for the art direction. Only an explicit statement in the description overrides it. Present the reading with the recipe so the user can correct it. Skip this step when there are no references.
+If `taste/` has content, analyze it with the method in `archetypes/taste.md`: read each reference, then the set, and summarize it as a reading with two to four signatures. The reading sets the languages and the traits, and it is the main evidence for the art direction. Only an explicit statement in the description overrides it. Present the reading with the recipe so the user can correct it. Skip this step when there are no references.
 
 ### 6. Write the direction
 
@@ -100,9 +100,9 @@ Product:    <primary> + <secondary>
 Experience: <dominant> + <supporting> (<scope>)
 Visual:     <dominant> + <secondary> (<scope>)
 Motion:     <language> + <exception> (<scope>)
-Dials:      density <n>, contrast <n>, softness <n>, depth <n>, color <n>, warmth <n>, expressivity <n>, motion <n>, novelty <n>
+Traits:     <trait> (<slightly | clearly | fully>), <trait> (<strength>), <trait> (<scope>)
 Brand:      <short summary of sources>, presence <level> (<surface>), <level> (<surface>)
-Taste:      <reference sources, or none>, applied to <choices, dials, avoid lists>
+Taste:      <reference sources, or none>, applied to <choices, traits, avoid lists>
 Idea:       <the one-sentence idea from direction.md>
 ```
 
@@ -118,9 +118,9 @@ Idea:       <the one-sentence idea from direction.md>
 
 For each layer: the choice, the scope of any supporting choice, why, and how the project differs from the archetype.
 
-## Dials
+## Traits
 
-| Dial | Preset | Value | Scope | Why |
+| Trait | Lean | Scope | Why |
 |---|---|---|---|---|
 
 ## Brand
@@ -136,7 +136,7 @@ For each layer: the choice, the scope of any supporting choice, why, and how the
 
 - **Sources:** <references, links and notes used>
 - **Reading:** <five to ten statements, each with the references it rests on and a confidence level>
-- **Applied:** <languages, dial positions, principles and avoid rules taken from the reading>
+- **Applied:** <languages, traits, principles and avoid rules taken from the reading>
 - **Tensions:** <where the references go outside a language's natural range, or use an anti-pattern, and why>
 - **Yielded:** <where the references gave way to an explicit statement in the description>
 
@@ -172,7 +172,7 @@ Do not load every file in full for every task. For each layer, read the shared s
 | Experience model | What this layer owns | Navigation, selection and feedback, implications for other layers, anti-patterns |
 | Visual language | What this layer owns, Non-negotiables, The generic default | Principles, Avoid, Tendencies |
 | Motion language | What this layer owns, Non-negotiables, The generic default, Vocabulary, Timing grows in the product | Role and character, Principles, Avoid, Reduced motion, the column in the Moments table |
-| Dials | From direction to values, Anchoring the dials | The descriptions and guardrails for every dial the recipe sets, and the presets table |
+| Traits | Writing traits in the genome, Tuning by prompt, From traits to values | The descriptions and guardrails for every trait the recipe names, the words table, and the language character table |
 | Brand | The whole file | Not applicable |
 | Taste | Principles of good design, Signal and noise, Anti-patterns, Critique | Analyzing references and References in a project, when `taste/` has content |
 
@@ -191,20 +191,24 @@ The constraints in the recipe are mandatory. Never interpret them creatively, an
 Each layer owns specific decisions, listed in its "What this layer owns" section. Never let one layer make a decision that belongs to another.
 
 - Product type and experience model decide structure and behavior. Brand never changes them.
-- Visual language decides the character of form. Dials decide the amount. Brand decides the specific assets.
+- Visual language decides the character of form. Traits decide which way it leans. Brand decides the specific assets.
 - The direction gives the product its idea. The art direction decides the expression, informed by the references; brand decides the assets. The taste model judges how well it is done. None of them change structure or behavior.
 - The experience model states what motion must communicate. The motion language decides how.
 
 ### Decide values in order
 
-Dials are an internal direction, not a measurement. They never calculate a value. For every concrete value, such as a radius, a text size, a spacing step or a duration:
+Traits are words, not measurements. They never calculate a value. For every concrete value, such as a radius, a text size, a spacing step or a duration:
 
 1. Start from the character of the visual or motion language.
-2. Lean in the direction the dial describes.
+2. Lean the way the traits describe.
 3. Fill in specific assets from the interpreted brand.
 4. Clamp to the accessibility floor.
 
-Then look at the result in the product. If it does not read as the intended direction, change the value. Anchor dial positions in references or in an earlier version, as described in `archetypes/density-and-personality.md`. When a dial is outside the language's natural range, apply it and note the tension.
+Then look at the result in the product. If it does not read as the intended lean, change the value. Anchor the leans that matter in references or in an earlier version, as described in `archetypes/traits.md`. When a trait leans past where the language stops being itself, apply it and note the tension.
+
+### Tune by prompt
+
+When the user asks for a change in words, such as "more compact", "calmer" or "more premium", follow *Tuning by prompt* in `archetypes/traits.md`. Translate the words into traits, show your interpretation before you change anything, change only what was named, starting from the current version, and record the prompt and the interpretation in the decision log. If a word has several readings, name them. If a prompt meets a constraint or a non-negotiable, say so.
 
 ### Treat avoid lists as constraints
 
@@ -220,7 +224,7 @@ The principles, the signal and noise tests and the anti-patterns in `archetypes/
 
 ### Never break the non-negotiables
 
-The non-negotiables in the visual and motion layers override every archetype, dial and brand rule. This includes contrast, visible focus, not relying on color alone, legible text sizes, touch target sizes and reduced motion. If the recipe or the brand input would break one, follow the non-negotiable and tell the user.
+The non-negotiables in the visual and motion layers override every archetype, trait and brand rule. This includes contrast, visible focus, not relying on color alone, legible text sizes, touch target sizes and reduced motion. If the recipe or the brand input would break one, follow the non-negotiable and tell the user.
 
 ### Keep scopes
 
@@ -228,7 +232,7 @@ One dominant choice per layer governs everything unless a scope says otherwise. 
 
 ### Do not invent archetypes
 
-Use only archetypes, dials and presets that exist in the repository. If a project seems to need something that is missing, describe it as a combination of existing ones, or propose a change to the repository.
+Use only archetypes and traits that exist in the repository. If a project seems to need something that is missing, describe it as a combination of existing ones, or propose a change to the repository.
 
 ---
 
@@ -249,7 +253,7 @@ When the user asks for directions, alternatives, options or an exploration, or b
 
 1. Start from the product type: which objects, states and flows does this view need?
 2. Apply the experience model: what is the center of gravity, how does navigation work, what must motion communicate?
-3. Apply the visual language and dials: hierarchy, composition, shape, surface, color roles, density.
+3. Apply the visual language and traits: hierarchy, composition, shape, surface, color roles, density.
 4. Apply the motion language to every state change.
 5. Apply the brand at the presence level for the surface.
 6. Express the direction: before each view, state in one line how the idea shows in it, and translate one or two signatures from the art direction.
@@ -257,7 +261,7 @@ When the user asks for directions, alternatives, options or an exploration, or b
 8. Critique the result as described in `archetypes/taste.md`, and revise before delivering.
 9. Run the self-check below.
 
-When generating tokens, structure them in three levels: primitives from the brand, semantic roles from the visual language and dials, and component values from all layers combined. Report every value clamped by the accessibility floor.
+When generating tokens, structure them in three levels: primitives from the brand, semantic roles from the visual language and traits, and component values from all layers combined. Report every value clamped by the accessibility floor.
 
 When the user changes direction during the project, update `recipe.md` and add a line to the decision log.
 
@@ -271,7 +275,7 @@ When asked to review work, run the critique in `archetypes/taste.md`. It starts 
 
 ## Updating this repository
 
-Do not change the archetype files as a side effect of project work. When project work shows that an archetype, preset or mapping is wrong:
+Do not change the archetype files as a side effect of project work. When project work shows that an archetype, a trait or a word is wrong:
 
 1. Describe the problem and the evidence.
 2. Propose the specific change.
@@ -284,7 +288,7 @@ Do not change the archetype files as a side effect of project work. When project
 
 - [ ] The work follows the recipe, or deviations are stated
 - [ ] No layer made a decision owned by another layer
-- [ ] Values follow the language character and the dial directions, and read as intended in the product
+- [ ] Values follow the language character and the traits, and read as intended in the product
 - [ ] Nothing in the chosen avoid lists appears in the output
 - [ ] The output does not drift toward the generic default
 - [ ] All non-negotiables are met

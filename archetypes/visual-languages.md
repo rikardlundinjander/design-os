@@ -20,12 +20,12 @@ A visual language is not a theme and not a brand. It says "typography carries th
 | Experience model | How the user engages | Object-first browsing with a workflow checkout |
 | **Visual language** | **The character of the form** | **Editorial: type-led hierarchy, few containers, asymmetry** |
 | Motion language | How things move | Quiet, functional transitions |
-| Density and personality | How much, how strong | Density 40, expressivity 60 |
+| Traits | Which way each quality leans | Slightly compact, clearly composed |
 | Brand | The specific assets | Typefaces, colors, logo, imagery, tone |
 
-Visual language sets the **character**. Density and personality set the **amount**. Brand supplies the **specific assets**.
+Visual language sets the **character**. Traits say **which way it leans**. Brand supplies the **specific assets**.
 
-Editorial at high density becomes a newspaper. Editorial at low density becomes a magazine. Same language, different dial settings.
+Editorial that leans compact becomes a newspaper. Editorial that leans spacious becomes a magazine. Same language, different traits.
 
 ---
 
@@ -34,7 +34,7 @@ Editorial at high density becomes a newspaper. Editorial at low density becomes 
 1. **Pick one dominant visual language.** It governs every surface unless a scope says otherwise.
 2. **Optionally add one secondary language, with a scope.** Example: "Editorial for marketing and content pages, Precision for the signed-in product." Never blend two languages on the same surface without a stated rule for which one wins.
 3. **Copy the principles and the avoid list into the project.** The avoid list is the most important part when working with AI, because it stops output from drifting toward the generic default.
-4. **Calibrate with the tendencies table.** It describes the kind of values that fit the language. Density and personality dials then say which way to lean within them.
+4. **Calibrate with the tendencies table.** It describes the kind of values that fit the language. Traits then say which way to lean within them.
 5. **Let brand fill in the specifics.** Typefaces, color values and imagery come from the brand layer and should fit the chosen language.
 
 If you cannot decide, answer this: *what should carry the hierarchy on a typical screen: type, space, color, containers or imagery?* The answer narrows the choice quickly.
@@ -674,5 +674,5 @@ Visual: Editorial (dominant) + Precision (signed-in product)
 - Keep every language in the schema above.
 - Describe principles and roles, never specific typefaces or color values. Those belong to the brand layer.
 - Every language needs an avoid list. It is the most useful part when working with AI.
-- Add a new language only when a direction cannot be described as an existing language with different dial settings or a different brand.
+- Add a new language only when a direction cannot be described as an existing language with different traits or a different brand.
 - Tendencies are starting ranges, not rules. Change them when a project proves them wrong, and update this file when the same correction happens more than once.
