@@ -10,7 +10,7 @@ It is platform-agnostic and written for both people and AI. Every file describes
 
 ## The idea
 
-Most products are not unique in their structure. They are unique in how a few decisions are combined. Genome separates those decisions into layers:
+Most products are not unique in their structure. They are unique in how a few decisions are combined. A genome separates those decisions into parts:
 
 ```text
 Product type          what the product is
@@ -19,41 +19,48 @@ Product type          what the product is
 + Motion language     how it moves
 + Traits              which way each quality leans
 + Brand               the specific assets and voice
++ Idea                what the experience revolves around
 = Starting point
 ```
 
-Each layer answers one question and stays out of the others. That separation is what makes the layers combinable: the same product type can take many experience models, the same visual language can carry many brands, and the same structure can be adjusted by prompting its traits instead of redesigned.
+Each part answers one question and stays out of the others. That separation is what makes them combinable: the same product type can take many experience models, the same visual language can carry many brands, and the same structure can be adjusted by prompting its traits instead of redesigned.
 
 The goal is not a library of templates. Templates reproduce sameness. The goal is a set of reusable decisions that can be recombined differently every time, so that the system handles the predictable parts and the designer introduces the unexpected ones.
 
 ---
 
-## The layers
+## The parts
 
-| # | Layer | Answers | File |
+**Archetypes** are the stable foundation: defined options for structure, experience and character, chosen from rather than invented.
+
+| # | Archetype | Answers | File |
 |---|---|---|---|
 | 1 | Product type | What is the product? Which objects, views, flows and states does it need? | [product-types.md](archetypes/product-types.md) |
 | 2 | Experience model | Where does the user's attention live, and who drives? | [experience-models.md](archetypes/experience-models.md) |
 | 3 | Visual language | What carries hierarchy, and what is the character of the form? | [visual-languages.md](archetypes/visual-languages.md) |
 | 4 | Motion language | What is motion for, and how does it behave? | [motion-languages.md](archetypes/motion-languages.md) |
-| 5 | Traits | Which way does each quality lean, and how far? | [traits.md](archetypes/traits.md) |
-| 6 | Brand | Which typefaces, colors, imagery, voice and signatures? | [brand.md](archetypes/brand.md) |
 
-Layers 1 to 4 are archetypes: a defined set of options to choose from. Layer 5 is a set of traits, described in words and adjusted by prompting. Layer 6 is interpreted from whatever brand material the project has.
+The other parts of a genome are not chosen from a list:
 
-**Taste**, described in [taste.md](archetypes/taste.md), is the quality bar of the system rather than a layer. It holds general principles of good design, the difference between signal and noise, anti-patterns and a method for critique, and it applies to every project. It also describes how to read references. When a project brings references, such as a direction chosen with a client, they decide how the product is expressed, and the brand decides what it is expressed with.
+| Part | Answers | File |
+|---|---|---|
+| Traits | Which way does each quality lean, and how far? Described in words, adjusted by prompting | [traits.md](traits/traits.md), [words.md](traits/words.md) |
+| Brand | Which typefaces, colors, imagery, voice and signatures? Interpreted from the brand material | [brand.md](brand/brand.md) |
+| Direction | What is the idea, and how does it look and behave? | [direction.md](process/direction.md) |
 
-**Direction**, described in [direction.md](process/direction.md), gives each project what the layers cannot: an idea. The genome defines the design space; the creative direction is the one-sentence idea the experience revolves around, and the art direction turns it into concrete rules for typography, composition, imagery, color and motion. Without an idea, the result tends to be correct but generic.
+**Taste**, described in [taste.md](taste/taste.md), is the quality bar of the system rather than a part of the genome. It holds general principles of good design, the difference between signal and noise, anti-patterns and a method for critique, and it applies to every project. It also describes how to read references. When a project brings references, such as a direction chosen with a client, they decide how the product is expressed, and the brand decides what it is expressed with.
+
+**Direction**, described in [direction.md](process/direction.md), gives each project what the archetypes cannot: an idea. The genome defines the design space; the creative direction is the one-sentence idea the experience revolves around, and the art direction turns it into concrete rules for typography, composition, imagery, color and motion. Without an idea, the result tends to be correct but generic.
 
 ---
 
 ## Starting a project
 
 1. **Clone or copy this repository.**
-2. **Add brand material, if you have any,** to the `brand/` folder. It can be anything: a logo, a screenshot of a color palette, brand guidelines, font files. Links, such as a component library or an existing website, can go in the description instead. No template to fill in.
-3. **Add references, if you have any,** to the `taste/` folder: a direction chosen with a client, screenshots, UI elements, examples of what to avoid, and notes on what to take from them. Keep screenshots of other people's work out of public repositories.
+2. **Add brand material, if you have any,** to the `project/brand/` folder. It can be anything: a logo, a screenshot of a color palette, brand guidelines, font files. Links, such as a component library or an existing website, can go in the description instead. No template to fill in.
+3. **Add references, if you have any,** to the `project/references/` folder: a direction chosen with a client, screenshots, UI elements, examples of what to avoid, and notes on what to take from them. Keep screenshots of other people's work out of public repositories.
 4. **Describe in plain text what you want to build.** Who it is for, what it should do, what it should feel like, and any constraints.
-5. **Let the AI write a genome and a direction.** Following [`AGENTS.md`](AGENTS.md), it chooses from each layer, describes the traits, interprets the brand material, reads any references, finds the idea and writes the art direction. The result goes to `genome.md` and `direction.md`. It asks only questions whose answers would change a choice.
+5. **Let the AI write a genome and a direction.** Following [`AGENTS.md`](AGENTS.md), it chooses the archetypes, describes the traits, interprets the brand material, reads any references, finds the idea and writes the art direction. The result goes to `project/genome.md` and `project/direction.md`. It asks only questions whose answers would change a choice.
 6. **Review and adjust the genome and the direction.**
 7. **Explore, if the direction is open.** The AI builds a few tracks from the genome, following [exploration.md](process/exploration.md): the closest version, one that stretches it and one that challenges it, each with the same key views. You choose, and the genome is updated.
 8. **Build from the genome.**
@@ -105,19 +112,26 @@ Values are then judged in the product, where they can be seen.
 design-os/
 ├── README.md                 this file
 ├── AGENTS.md                 instructions for AI agents
-├── process/                  how work moves from genome to product
-│   ├── direction.md
-│   └── exploration.md
-├── archetypes/               the six layers and the taste model
+├── archetypes/               the stable foundation, chosen from
 │   ├── product-types.md
 │   ├── experience-models.md
 │   ├── visual-languages.md
-│   ├── motion-languages.md
+│   └── motion-languages.md
+├── traits/                   how a genome leans, in words
 │   ├── traits.md
-│   ├── brand.md
+│   └── words.md
+├── brand/                    how brand material is read
+│   └── brand.md
+├── taste/                    the quality bar, and how references are read
 │   └── taste.md
-├── brand/                    brand material for the project, in any form
-└── taste/                    optional references for the project, in any form
+├── process/                  how work moves from genome to product
+│   ├── direction.md
+│   └── exploration.md
+└── project/                  this project: everything specific to it
+    ├── genome.md             written by the AI, adjusted by you
+    ├── direction.md
+    ├── brand/                brand material, in any form
+    └── references/           references, in any form
 ```
 
 Planned: implementation examples per archetype, such as tokens and reference views, once the text definitions are stable.
@@ -126,9 +140,9 @@ Planned: implementation examples per archetype, such as tokens and reference vie
 
 ## Using Genome in a project
 
-Keep the archetype files unchanged in the project. Project-specific material lives beside them: brand material in `brand/`, references in `taste/`, and the genome and the direction in `genome.md` and `direction.md` at the project root, written by the AI and adjusted by you.
+Keep the system files unchanged in the project. Everything specific to the project lives in `project/`: brand material in `project/brand/`, references in `project/references/`, and the genome and the direction in `project/genome.md` and `project/direction.md`, written by the AI and adjusted by you.
 
-Most AI tools read [`AGENTS.md`](AGENTS.md) automatically. It describes how to turn a written description into a genome, which sections of each layer to read, how values are decided and how to check the work before delivering it.
+Most AI tools read [`AGENTS.md`](AGENTS.md) automatically. It describes how to turn a written description into a genome, which sections of each part to read, how values are decided and how to check the work before delivering it.
 
 ---
 
@@ -136,7 +150,7 @@ Most AI tools read [`AGENTS.md`](AGENTS.md) automatically. It describes how to t
 
 Genome improves through use. When a project shows that an archetype, a trait or a word is wrong, update the file.
 
-- **Keep the schema.** Every archetype within a layer uses the same sections, so they stay comparable.
+- **Keep the schema.** Every archetype of the same kind uses the same sections, so they stay comparable.
 - **Stay platform-agnostic.** Describe principles, structure and behavior, not frameworks, libraries or tools.
 - **Add sparingly.** Add a new archetype only when a product cannot be described with the existing ones, their combinations or different traits.
 - **Update on repetition.** When the same correction appears in more than one project, change the default.

@@ -1,14 +1,14 @@
 ---
-layer: brand
+part: brand
 version: 0.3
 status: draft
 ---
 
 # Brand
 
-Layer 6 of the genome. The brand layer supplies **the specific assets and voice** of a product: typefaces, colors, logo, imagery, icons, tone, signature motion and other distinctive elements.
+Part of the genome. Brand supplies **the specific assets and voice** of a product: typefaces, colors, logo, imagery, icons, tone, signature motion and other distinctive elements.
 
-Brand is different from the other layers. It is not chosen from a list of archetypes, and it does not arrive in a fixed format. One project starts from a logo and a single color. Another starts from full brand guidelines, a design system in a component library and an existing website. This file describes how to **interpret whatever brand input exists** and connect it to the other layers.
+Brand is not an archetype. It is not chosen from a list, and it does not arrive in a fixed format. One project starts from a logo and a single color. Another starts from full brand guidelines, a design system in a component library and an existing website. This file describes how to **interpret whatever brand input exists** and connect it to the other layers.
 
 ---
 
@@ -42,7 +42,7 @@ Brand input can take any form, and often several at once. Common examples:
 - Photography, illustrations or other example imagery
 - A written description: "we want to feel calm and trustworthy, our color is dark green"
 
-Place files in the `brand/` folder of the project, and mention links and descriptions in the written project description. Nothing needs to be renamed or structured first.
+Place files in the `project/brand/` folder of the project, and mention links and descriptions in the written project description. Nothing needs to be renamed or structured first.
 
 ---
 

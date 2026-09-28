@@ -7,9 +7,9 @@ This file tells AI agents how to use Genome. It applies to any tool or model wor
 ## How a project starts
 
 1. The user clones or copies this repository.
-2. The user adds any brand material they have to the `brand/` folder. This can be anything: a logo, a screenshot of a palette, guidelines, font files, or nothing at all. Optionally, they add references to the `taste/` folder: a direction chosen with a client, their own references, screenshots, UI elements, or examples of what to avoid.
+2. The user adds any brand material they have to the `project/brand/` folder. This can be anything: a logo, a screenshot of a palette, guidelines, font files, or nothing at all. Optionally, they add references to the `project/references/` folder: a direction chosen with a client, their own references, screenshots, UI elements, or examples of what to avoid.
 3. The user describes in written text what they want to build. The description may also contain links, such as a component library, an existing website or a design file.
-4. **You** turn the description, the brand material and any references into a genome and a direction, and write them to `genome.md` and `direction.md` at the project root.
+4. **You** turn the description, the brand material and any references into a genome and a direction, and write them to `project/genome.md` and `project/direction.md`.
 5. The user reviews and adjusts the genome and the direction.
 6. If the direction is still open, or the user asks for alternatives, you explore it in tracks, following `process/exploration.md`, and the user chooses.
 7. Only then do you build from the genome.
@@ -20,18 +20,21 @@ The user does not fill in templates. Your job is to interpret free-form input an
 
 ## What this repository contains
 
-Genome describes digital products as combinations of six independent layers:
+Genome describes a digital product as a genome: four archetypes chosen from a stable foundation, plus traits, brand and an idea.
 
-| # | Layer | File | Kind |
-|---|---|---|---|
-| 1 | Product type | `archetypes/product-types.md` | Choose from archetypes |
-| 2 | Experience model | `archetypes/experience-models.md` | Choose from archetypes |
-| 3 | Visual language | `archetypes/visual-languages.md` | Choose from archetypes |
-| 4 | Motion language | `archetypes/motion-languages.md` | Choose from archetypes |
-| 5 | Traits | `archetypes/traits.md` | Describe in words; adjust by prompting |
-| 6 | Brand | `archetypes/brand.md` | Interpret brand input |
+| Part | File | Kind |
+|---|---|---|
+| Archetype 1: Product type | `archetypes/product-types.md` | Choose |
+| Archetype 2: Experience model | `archetypes/experience-models.md` | Choose |
+| Archetype 3: Visual language | `archetypes/visual-languages.md` | Choose |
+| Archetype 4: Motion language | `archetypes/motion-languages.md` | Choose |
+| Traits | `traits/traits.md`, `traits/words.md` | Describe in words; adjust by prompting |
+| Brand | `brand/brand.md` | Interpret the brand material |
+| Direction | `process/direction.md` | Find the idea; write the art direction |
 
-The taste model in `archetypes/taste.md` is not a layer. It is the quality bar that applies to every project: principles of good design, signal and noise, anti-patterns and critique. It also describes how to read the references in `taste/`. It never changes structure or brand.
+Everything specific to a project lives in `project/`: the genome, the direction, the brand material and the references.
+
+The taste model in `taste/taste.md` is not part of the genome. It is the quality bar that applies to every project: principles of good design, signal and noise, anti-patterns and critique. It also describes how to read the references in `project/references/`. It never changes structure or brand.
 
 The `process/` folder describes how work moves from genome to product:
 
@@ -47,15 +50,15 @@ The `process/` folder describes how work moves from genome to product:
 ### 1. Read the input
 
 - The written project description, including every hard requirement in it: these become the constraints
-- Everything in `brand/`, and every link mentioned in the description
-- Everything in `taste/`, if the folder has content
+- Everything in `project/brand/`, and every link mentioned in the description
+- Everything in `project/references/`, if the folder has content
 - An existing `genome.md`, if the project already has one; update it rather than starting over
 
-### 2. Choose each layer, in order
+### 2. Choose each part, in order
 
 Work from structure to style: product type, experience model, visual language, motion language, traits, brand.
 
-For each layer, read its "How to use this file" section and the sections listed under [Reading the layers](#reading-the-layers). Then:
+For each layer, read its "How to use this file" section and the sections listed under [Reading the parts](#reading-the-parts). Then:
 
 - Pick the choice that fits the description best, following the layer's rules: one primary or dominant choice, and supporting choices only with a scope.
 - For the visual and motion language, when the project has references, take the languages from their reading, unless the description names others.
@@ -64,15 +67,15 @@ For each layer, read its "How to use this file" section and the sections listed 
 
 ### 3. Describe the traits
 
-Traits are words, never numbers. When the project has references, take the traits from their reading. Otherwise start from the language character in `archetypes/traits.md`. Translate the description's words, such as playful or premium, through the words table, and record which reading you chose when a word has several. References may lean a trait past where the language stops being itself; record the tension. Write only the traits that give the product its character, with at least two clear leans.
+Traits are words, never numbers. When the project has references, take the traits from their reading. Otherwise start from the language character in `traits/traits.md`. Translate the description's words, such as playful or premium, through `traits/words.md`, and record which reading you chose when a word has several. References may lean a trait past where the language stops being itself; record the tension. Write only the traits that give the product its character, with at least two clear leans.
 
 ### 4. Interpret the brand
 
-Follow the four steps in `archetypes/brand.md`: inventory, extract, fill gaps, confirm. Mark every value that was read from an image, generated or filled in as a fallback. If the brand input includes a design system or an existing product, identify the closest visual language and traits, and decide with the user whether to follow or evolve it.
+Follow the four steps in `brand/brand.md`: inventory, extract, fill gaps, confirm. Mark every value that was read from an image, generated or filled in as a fallback. If the brand input includes a design system or an existing product, identify the closest visual language and traits, and decide with the user whether to follow or evolve it.
 
 ### 5. Read the references
 
-If `taste/` has content, analyze it with the method in `archetypes/taste.md`: read each reference, then the set, and summarize it as a reading with two to four signatures. The reading sets the languages and the traits, and it is the main evidence for the art direction. Only an explicit statement in the description overrides it. Present the reading with the genome so the user can correct it. Skip this step when there are no references.
+If `project/references/` has content, analyze it with the method in `taste/taste.md`: read each reference, then the set, and summarize it as a reading with two to four signatures. The reading sets the languages and the traits, and it is the main evidence for the art direction. Only an explicit statement in the description overrides it. Present the reading with the genome so the user can correct it. Skip this step when there are no references.
 
 ### 6. Write the direction
 
@@ -162,9 +165,9 @@ Keep the genome short. It is a starting point, not a specification.
 
 ---
 
-## Reading the layers
+## Reading the parts
 
-Do not load every file in full for every task. For each layer, read the shared sections and the section for the chosen archetype:
+Do not load every file in full for every task. For each part, read the shared sections and the section for the chosen archetype:
 
 | Layer | Always read | Read for the chosen archetype |
 |---|---|---|
@@ -172,9 +175,9 @@ Do not load every file in full for every task. For each layer, read the shared s
 | Experience model | What this layer owns | Navigation, selection and feedback, implications for other layers, anti-patterns |
 | Visual language | What this layer owns, Non-negotiables, The generic default | Principles, Avoid, Tendencies |
 | Motion language | What this layer owns, Non-negotiables, The generic default, Vocabulary, Timing grows in the product | Role and character, Principles, Avoid, Reduced motion, the column in the Moments table |
-| Traits | Writing traits in the genome, Tuning by prompt, From traits to values | The descriptions and guardrails for every trait the genome names, the words table, and the language character table |
+| Traits | Writing traits in the genome, Tuning by prompt, From traits to values | The descriptions and guardrails for every trait the genome names, `traits/words.md`, and the language character table |
 | Brand | The whole file | Not applicable |
-| Taste | Principles of good design, Signal and noise, Anti-patterns, Critique | Analyzing references and References in a project, when `taste/` has content |
+| Taste | Principles of good design, Signal and noise, Anti-patterns, Critique | Analyzing references and References in a project, when `project/references/` has content |
 
 For secondary or supporting choices, read the same sections and apply them only within their stated scope.
 
@@ -204,11 +207,11 @@ Traits are words, not measurements. They never calculate a value. For every conc
 3. Fill in specific assets from the interpreted brand.
 4. Clamp to the accessibility floor.
 
-Then look at the result in the product. If it does not read as the intended lean, change the value. Anchor the leans that matter in references or in an earlier version, as described in `archetypes/traits.md`. When a trait leans past where the language stops being itself, apply it and note the tension.
+Then look at the result in the product. If it does not read as the intended lean, change the value. Anchor the leans that matter in references or in an earlier version, as described in `traits/traits.md`. When a trait leans past where the language stops being itself, apply it and note the tension.
 
 ### Tune by prompt
 
-When the user asks for a change in words, such as "more compact", "calmer" or "more premium", follow *Tuning by prompt* in `archetypes/traits.md`. Translate the words into traits, show your interpretation before you change anything, change only what was named, starting from the current version, and record the prompt and the interpretation in the decision log. If a word has several readings, name them. If a prompt meets a constraint or a non-negotiable, say so.
+When the user asks for a change in words, such as "more compact", "calmer" or "more premium", follow *Tuning by prompt* in `traits/traits.md`. Translate the words into traits, show your interpretation before you change anything, change only what was named, starting from the current version, and record the prompt and the interpretation in the decision log. If a word has several readings, name them. If a prompt meets a constraint or a non-negotiable, say so.
 
 ### Treat avoid lists as constraints
 
@@ -216,7 +219,7 @@ The avoid lists and anti-patterns in each chosen archetype are hard constraints,
 
 ### Apply the taste model
 
-The principles, the signal and noise tests and the anti-patterns in `archetypes/taste.md` apply to every project. Anti-patterns are judgments rather than bans: one is allowed only when the genome states why it is used. Where a chosen visual language deliberately does something the taste model warns against, the language wins inside its own character.
+The principles, the signal and noise tests and the anti-patterns in `taste/taste.md` apply to every project. Anti-patterns are judgments rather than bans: one is allowed only when the genome states why it is used. Where a chosen visual language deliberately does something the taste model warns against, the language wins inside its own character.
 
 ### Check against the generic default
 
@@ -258,7 +261,7 @@ When the user asks for directions, alternatives, options or an exploration, or b
 5. Apply the brand at the presence level for the surface.
 6. Express the direction: before each view, state in one line how the idea shows in it, and translate one or two signatures from the art direction.
 7. Design the required states, not only the ideal state.
-8. Critique the result as described in `archetypes/taste.md`, and revise before delivering.
+8. Critique the result as described in `taste/taste.md`, and revise before delivering.
 9. Run the self-check below.
 
 When generating tokens, structure them in three levels: primitives from the brand, semantic roles from the visual language and traits, and component values from all layers combined. Report every value clamped by the accessibility floor.
@@ -269,7 +272,7 @@ When the user changes direction during the project, update `genome.md` and add a
 
 ## Reviewing work
 
-When asked to review work, run the critique in `archetypes/taste.md`. It starts with genome fit: report findings by layer, and for each layer state what matches, what deviates, and whether each deviation looks deliberate or accidental. Then judge the result against the principles, the signal and noise tests, the anti-patterns and the non-negotiables, and lead with the single most important problem.
+When asked to review work, run the critique in `taste/taste.md`. It starts with genome fit: report findings by layer, and for each layer state what matches, what deviates, and whether each deviation looks deliberate or accidental. Then judge the result against the principles, the signal and noise tests, the anti-patterns and the non-negotiables, and lead with the single most important problem.
 
 ---
 

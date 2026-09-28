@@ -6,7 +6,7 @@ status: draft
 
 # Experience models
 
-Layer 2 of the genome. An experience model describes **how the user engages with the product**: where their attention lives, how they move through it, who is in control and how they express intent.
+Archetype 2 of 4. An experience model describes **how the user engages with the product**: where their attention lives, how they move through it, who is in control and how they express intent.
 
 Two products of the same product type can feel completely different depending on their experience model. A task manager built around a list, a board, a command bar or a conversation is the same product type with four different experiences.
 

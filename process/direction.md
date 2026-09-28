@@ -27,7 +27,7 @@ The simplest distinction:
 | Constraints | What must be true, in the genome | Must include pricing, no WebGL |
 | **Creative direction** | **The idea** | "The feeling of tennis, decoded by technology" |
 | **Art direction** | **The rules that make the idea visible** | Close crops of real play; data as a thin layer over movement |
-| Project references | Evidence for the art direction, and its signatures | The reading of the references in `taste/` |
+| Project references | Evidence for the art direction, and its signatures | The reading of the references in `project/references/` |
 | Brand | The assets the art direction works with | Typefaces, colors, logo |
 | Taste model | Whether the result is good | Principles, signal and noise, critique |
 
@@ -121,7 +121,7 @@ Write the areas that matter for the product. Most products need the first five.
 
 ## The direction file
 
-Write `direction.md` at the project root, next to `genome.md`.
+Write `project/direction.md`, next to `project/genome.md`.
 
 ````markdown
 # Direction

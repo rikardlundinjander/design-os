@@ -1,12 +1,12 @@
 ---
-layer: traits
-version: 0.3
+part: traits
+version: 0.4
 status: draft
 ---
 
 # Traits
 
-Layer 5 of the genome. Traits are **the qualities of the product, described in words**: how compact it is, how strong its contrast is, how soft its forms are, how much it moves. Each trait runs between two poles, such as spacious and compact, and the genome says which way the product leans and how far.
+Part of the genome. Traits are **the qualities of the product, described in words**: how compact it is, how strong its contrast is, how soft its forms are, how much it moves. Each trait runs between two poles, such as spacious and compact, and the genome says which way the product leans and how far.
 
 Traits are not set with numbers. They are **adjusted by prompting**: "more compact", "a bit softer", "calmer", "more premium". The words in this file are how a prompt is turned into a change, and how the change is explained back before it is made.
 
@@ -93,7 +93,7 @@ Keep scoped traits few. More than two or three usually means the product needs t
 
 Traits change when someone asks for a change in words. Every change is relative to the current version.
 
-1. **Read the prompt.** Find the traits it names, and translate other words through the [words table](#words). "More premium" is not a trait; it is a combination of them.
+1. **Read the prompt.** Find the traits it names, and translate other words through [words.md](words.md). "More premium" is not a trait; it is a combination of them.
 2. **Show the interpretation before changing anything.** Say which traits move, in which direction, how far, and what stays the same:
    *"More premium, read as: less compact (clearly), less color, more space around headings. Typefaces, layout and imagery stay."*
 3. **Make the change,** starting from the current version, and keep everything that was not named.
@@ -326,32 +326,7 @@ Traits change when someone asks for a change in words. Every change is relative 
 
 ## Words
 
-Briefs, clients and prompts rarely name traits. They say playful, premium or modern tech. This table translates common words into traits, and names what each word is often confused with. It is a starting point; every project records what its words mean, and repeated corrections change the table.
-
-| Word | Reads as | Not the same as |
-|---|---|---|
-| Playful | Saturated, soft, composed, richer motion | Childish: everything soft and saturated at once, with no hierarchy |
-| Premium, quiet | Spacious, little color, controlled contrast, a high finish | Empty: space without content strong enough to hold it |
-| Premium, dramatic | Layered, composed, dramatic imagery; often a Cinematic language | Glossy: effects standing in for a point of view |
-| Luxury | Fully spacious, monochrome, very few elements | Black and gold, thin serif type everywhere |
-| Minimal | Spacious, little color, flat, uniform | Unfinished: missing states and hierarchy |
-| Clean | Flat, little color, few means used consistently | The generic default |
-| Calm | Subtle contrast, little color, spacious, minimal motion | Dull: nothing leads |
-| Bold | Strong contrast, composed, saturated or large in scale | Loud: everything at full volume |
-| Friendly | Soft, slightly warm, some color | Childish |
-| Human | Warm, slightly soft, imagery of real people and situations | Stock photos of smiling people |
-| Precise | Compact, strong contrast, sharp, flat | Cold: precise with no point of view |
-| Technical | Compact, cool, sharp, uniform | Monospace and grids as decoration |
-| Modern tech | Sharp, strong contrast, little color or one vivid accent, flat | Purple and blue gradients, glow, glass, dark by default |
-| Restrained | Uniform, minimal motion, little color | Timid: no decision stands out |
-| Elegant | Spacious, subtle contrast, sharp, few type sizes | Fragile: text too light or small to read |
-| Energetic | Strong contrast, composed, rich motion, saturated | Noisy: motion and color without hierarchy |
-| Trustworthy | Conventional, strong contrast in text, restrained | Blue everything |
-| Physical | Layered, a Physical motion language, richer motion | Skeuomorphic decoration |
-
-Words such as editorial or industrial are not traits. They describe a character, and belong to the visual language.
-
-**Growing the words.** A word means most when it is anchored in images. References for a word can be collected in `taste/words/<word>/`, with examples of what it does not mean beside them, and read with the method in `taste.md`. The reading replaces the row in this table for that project, and repeated readings update the table.
+Briefs, clients and prompts rarely name traits. They say playful, premium or modern tech. [words.md](words.md) translates common words into traits, names what each is often confused with, and grows as projects correct it.
 
 ---
 
@@ -432,8 +407,7 @@ Traits:     spacious (fully), soft (fully), saturated (fully), rich motion
 
 ## Contributing
 
-- Add a new trait only when it is independent of the existing traits and of the language layers. If it can be expressed as a combination, add it to the words table instead.
+- Add a new trait only when it is independent of the existing traits and of the language layers. If it can be expressed as a combination, add it to `words.md` instead.
 - Every trait needs two poles, a description of each lean, the direction of change, and guardrails.
 - Do not add numbers. Traits are words, and values are decided in the product.
-- Add a word to the words table when it keeps appearing in briefs or prompts, and update a row when projects keep correcting it.
 - Keep descriptions platform-agnostic.

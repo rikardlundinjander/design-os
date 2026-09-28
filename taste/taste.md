@@ -1,5 +1,5 @@
 ---
-layer: taste
+part: taste
 version: 0.4
 status: draft
 ---
@@ -209,14 +209,14 @@ Summarize a set as a **reading**: five to ten statements, each with the referenc
 
 ## References in a project
 
-A project can bring its own references in the `taste/` folder. Typical sources:
+A project can bring its own references in the `project/references/` folder. Typical sources:
 
 - A direction chosen with a client, for example in a workshop
 - The designer's or the studio's own references and earlier work
 - Screenshots, UI elements, links, and notes on what to take from them
 - Examples of what to avoid
 
-Place files in the `taste/` folder, and mention links in the written project description. Nothing needs to be renamed or structured first. Notes on what someone reacted to, such as "they liked the calm in B, not the black", are worth more than more images.
+Place files in the `project/references/` folder, and mention links in the written project description. Nothing needs to be renamed or structured first. Notes on what someone reacted to, such as "they liked the calm in B, not the black", are worth more than more images.
 
 **Images of other people's work stay private.** Keep screenshots out of public repositories. Links and written notes can be shared.
 
@@ -271,7 +271,7 @@ When sources disagree about expression, earlier wins:
 2. **Constraints.** The hard requirements in the genome.
 3. **The project description,** where it is explicit.
 4. **The direction,** once the user has confirmed it: the idea and the art direction in `direction.md`.
-5. **Project references.** The reading of the references in `taste/`.
+5. **Project references.** The reading of the references in `project/references/`.
 6. **The taste model and archetype defaults.** Principles, anti-patterns, language character and fallbacks.
 
 Brand assets are not part of this order. They come from the brand.

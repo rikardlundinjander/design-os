@@ -6,7 +6,7 @@ status: draft
 
 # Visual languages
 
-Layer 3 of the genome. A visual language is **art direction expressed as principles**: how hierarchy is created, how space is used, what shapes, surfaces, color and imagery do, and what is deliberately left out.
+Archetype 3 of 4. A visual language is **art direction expressed as principles**: how hierarchy is created, how space is used, what shapes, surfaces, color and imagery do, and what is deliberately left out.
 
 A visual language is not a theme and not a brand. It says "typography carries the hierarchy and containers are rare", not "use this font in this blue". The same visual language can be applied to many brands, and the same brand can be expressed through different visual languages.
 

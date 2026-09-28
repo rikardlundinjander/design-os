@@ -79,7 +79,7 @@ Tracks must offer a real choice. A different **idea** is the largest difference 
 
 ## The track file
 
-Each track has a short file at `explorations/<letter>-<name>/track.md` in the project.
+Each track has a short file at `project/explorations/<letter>-<name>/track.md`.
 
 ````markdown
 # B: Editorial scale
@@ -114,7 +114,7 @@ Traits:     strong contrast (fully, was clearly), composed (clearly, was uniform
 
 ## Critique
 
-<Written after building, following the critique in archetypes/taste.md.>
+<Written after building, following the critique in taste/taste.md.>
 ````
 
 List only what differs from the genome. Everything not listed is the genome.
@@ -171,7 +171,7 @@ A choice can take three forms:
 1. **Update the genome and the direction.** Apply the chosen track's differences, and any borrowed qualities, to `genome.md` and `direction.md`.
 2. **Log the decision.** Add a line to the decision log: which track was chosen, over which, and why.
 3. **Park the others.** Set their status to parked. Keep the files and the previews; they are the history of the direction and can be borrowed from later.
-4. **Keep the reactions.** What the client or the team reacted to, for or against, is a strong reference. Add notes to `taste/`, so the next reading of the references includes them.
+4. **Keep the reactions.** What the client or the team reacted to, for or against, is a strong reference. Add notes to `project/references/`, so the next reading of the references includes them.
 
 ---
 

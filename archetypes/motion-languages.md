@@ -6,7 +6,7 @@ status: draft
 
 # Motion languages
 
-Layer 4 of the genome. A motion language describes **the role and character of motion**: what motion is used for, how it feels, and where it is deliberately absent.
+Archetype 4 of 4. A motion language describes **the role and character of motion**: what motion is used for, how it feels, and where it is deliberately absent.
 
 Motion is not decoration. It explains what happened, where things went, what caused what and what matters now. A motion language decides how much of that explanation is carried by movement, and with what character.
 
